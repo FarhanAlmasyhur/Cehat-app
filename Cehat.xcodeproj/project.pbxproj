@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837628532AE9005C2F17 /* AppDelegate.swift */; };
+		D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837828532AE9005C2F17 /* SceneDelegate.swift */; };
+		D40E837B28532AE9005C2F17 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837A28532AE9005C2F17 /* MainViewController.swift */; };
+		D40E837E28532AE9005C2F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40E837C28532AE9005C2F17 /* Main.storyboard */; };
+		D40E838128532AE9005C2F17 /* Cehat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D40E837F28532AE9005C2F17 /* Cehat.xcdatamodeld */; };
+		D40E838328532AEA005C2F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40E838228532AEA005C2F17 /* Assets.xcassets */; };
+		D40E838628532AEA005C2F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40E838428532AEA005C2F17 /* LaunchScreen.storyboard */; };
+		D40E839128532AEA005C2F17 /* CehatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E839028532AEA005C2F17 /* CehatTests.swift */; };
+		D40E839B28532AEA005C2F17 /* CehatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E839A28532AEA005C2F17 /* CehatUITests.swift */; };
+		D40E839D28532AEA005C2F17 /* CehatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E839C28532AEA005C2F17 /* CehatUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D40E838D28532AEA005C2F17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D40E836B28532AE9005C2F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D40E837228532AE9005C2F17;
+			remoteInfo = Cehat;
+		};
+		D40E839728532AEA005C2F17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D40E836B28532AE9005C2F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D40E837228532AE9005C2F17;
+			remoteInfo = Cehat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D40E837328532AE9005C2F17 /* Cehat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cehat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D40E837628532AE9005C2F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D40E837828532AE9005C2F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D40E837A28532AE9005C2F17 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D40E837D28532AE9005C2F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D40E838028532AE9005C2F17 /* Cehat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cehat.xcdatamodel; sourceTree = "<group>"; };
+		D40E838228532AEA005C2F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D40E838528532AEA005C2F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D40E838728532AEA005C2F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D40E838C28532AEA005C2F17 /* CehatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CehatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D40E839028532AEA005C2F17 /* CehatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CehatTests.swift; sourceTree = "<group>"; };
+		D40E839628532AEA005C2F17 /* CehatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CehatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D40E839A28532AEA005C2F17 /* CehatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CehatUITests.swift; sourceTree = "<group>"; };
+		D40E839C28532AEA005C2F17 /* CehatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CehatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D40E837028532AE9005C2F17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D40E838928532AEA005C2F17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D40E839328532AEA005C2F17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D40E836A28532AE9005C2F17 = {
+			isa = PBXGroup;
+			children = (
+				D40E837528532AE9005C2F17 /* Cehat */,
+				D40E838F28532AEA005C2F17 /* CehatTests */,
+				D40E839928532AEA005C2F17 /* CehatUITests */,
+				D40E837428532AE9005C2F17 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D40E837428532AE9005C2F17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D40E837328532AE9005C2F17 /* Cehat.app */,
+				D40E838C28532AEA005C2F17 /* CehatTests.xctest */,
+				D40E839628532AEA005C2F17 /* CehatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D40E837528532AE9005C2F17 /* Cehat */ = {
+			isa = PBXGroup;
+			children = (
+				D40E83AC28532B1A005C2F17 /* Controller */,
+				D40E83AB28532B10005C2F17 /* View */,
+				D40E83A928532B01005C2F17 /* Model */,
+				D40E837628532AE9005C2F17 /* AppDelegate.swift */,
+				D40E837828532AE9005C2F17 /* SceneDelegate.swift */,
+				D40E837A28532AE9005C2F17 /* MainViewController.swift */,
+				D40E837C28532AE9005C2F17 /* Main.storyboard */,
+				D40E838228532AEA005C2F17 /* Assets.xcassets */,
+				D40E838428532AEA005C2F17 /* LaunchScreen.storyboard */,
+				D40E838728532AEA005C2F17 /* Info.plist */,
+				D40E837F28532AE9005C2F17 /* Cehat.xcdatamodeld */,
+			);
+			path = Cehat;
+			sourceTree = "<group>";
+		};
+		D40E838F28532AEA005C2F17 /* CehatTests */ = {
+			isa = PBXGroup;
+			children = (
+				D40E839028532AEA005C2F17 /* CehatTests.swift */,
+			);
+			path = CehatTests;
+			sourceTree = "<group>";
+		};
+		D40E839928532AEA005C2F17 /* CehatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D40E839A28532AEA005C2F17 /* CehatUITests.swift */,
+				D40E839C28532AEA005C2F17 /* CehatUITestsLaunchTests.swift */,
+			);
+			path = CehatUITests;
+			sourceTree = "<group>";
+		};
+		D40E83A928532B01005C2F17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D40E83AB28532B10005C2F17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D40E83AC28532B1A005C2F17 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D40E837228532AE9005C2F17 /* Cehat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D40E83A028532AEA005C2F17 /* Build configuration list for PBXNativeTarget "Cehat" */;
+			buildPhases = (
+				D40E836F28532AE9005C2F17 /* Sources */,
+				D40E837028532AE9005C2F17 /* Frameworks */,
+				D40E837128532AE9005C2F17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cehat;
+			productName = Cehat;
+			productReference = D40E837328532AE9005C2F17 /* Cehat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D40E838B28532AEA005C2F17 /* CehatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D40E83A328532AEA005C2F17 /* Build configuration list for PBXNativeTarget "CehatTests" */;
+			buildPhases = (
+				D40E838828532AEA005C2F17 /* Sources */,
+				D40E838928532AEA005C2F17 /* Frameworks */,
+				D40E838A28532AEA005C2F17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D40E838E28532AEA005C2F17 /* PBXTargetDependency */,
+			);
+			name = CehatTests;
+			productName = CehatTests;
+			productReference = D40E838C28532AEA005C2F17 /* CehatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D40E839528532AEA005C2F17 /* CehatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D40E83A628532AEA005C2F17 /* Build configuration list for PBXNativeTarget "CehatUITests" */;
+			buildPhases = (
+				D40E839228532AEA005C2F17 /* Sources */,
+				D40E839328532AEA005C2F17 /* Frameworks */,
+				D40E839428532AEA005C2F17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D40E839828532AEA005C2F17 /* PBXTargetDependency */,
+			);
+			name = CehatUITests;
+			productName = CehatUITests;
+			productReference = D40E839628532AEA005C2F17 /* CehatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D40E836B28532AE9005C2F17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					D40E837228532AE9005C2F17 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					D40E838B28532AEA005C2F17 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = D40E837228532AE9005C2F17;
+					};
+					D40E839528532AEA005C2F17 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = D40E837228532AE9005C2F17;
+					};
+				};
+			};
+			buildConfigurationList = D40E836E28532AE9005C2F17 /* Build configuration list for PBXProject "Cehat" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D40E836A28532AE9005C2F17;
+			productRefGroup = D40E837428532AE9005C2F17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D40E837228532AE9005C2F17 /* Cehat */,
+				D40E838B28532AEA005C2F17 /* CehatTests */,
+				D40E839528532AEA005C2F17 /* CehatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D40E837128532AE9005C2F17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D40E838628532AEA005C2F17 /* LaunchScreen.storyboard in Resources */,
+				D40E838328532AEA005C2F17 /* Assets.xcassets in Resources */,
+				D40E837E28532AE9005C2F17 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D40E838A28532AEA005C2F17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D40E839428532AEA005C2F17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D40E836F28532AE9005C2F17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D40E837B28532AE9005C2F17 /* MainViewController.swift in Sources */,
+				D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */,
+				D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */,
+				D40E838128532AE9005C2F17 /* Cehat.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D40E838828532AEA005C2F17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D40E839128532AEA005C2F17 /* CehatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D40E839228532AEA005C2F17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D40E839D28532AEA005C2F17 /* CehatUITestsLaunchTests.swift in Sources */,
+				D40E839B28532AEA005C2F17 /* CehatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D40E838E28532AEA005C2F17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D40E837228532AE9005C2F17 /* Cehat */;
+			targetProxy = D40E838D28532AEA005C2F17 /* PBXContainerItemProxy */;
+		};
+		D40E839828532AEA005C2F17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D40E837228532AE9005C2F17 /* Cehat */;
+			targetProxy = D40E839728532AEA005C2F17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D40E837C28532AE9005C2F17 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D40E837D28532AE9005C2F17 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D40E838428532AEA005C2F17 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D40E838528532AEA005C2F17 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D40E839E28532AEA005C2F17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D40E839F28532AEA005C2F17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D40E83A128532AEA005C2F17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L54R5L5GQL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cehat/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhan.Cehat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D40E83A228532AEA005C2F17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L54R5L5GQL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cehat/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhan.Cehat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D40E83A428532AEA005C2F17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L54R5L5GQL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhan.CehatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cehat.app/Cehat";
+			};
+			name = Debug;
+		};
+		D40E83A528532AEA005C2F17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L54R5L5GQL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhan.CehatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cehat.app/Cehat";
+			};
+			name = Release;
+		};
+		D40E83A728532AEA005C2F17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L54R5L5GQL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhan.CehatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cehat;
+			};
+			name = Debug;
+		};
+		D40E83A828532AEA005C2F17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L54R5L5GQL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhan.CehatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cehat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D40E836E28532AE9005C2F17 /* Build configuration list for PBXProject "Cehat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D40E839E28532AEA005C2F17 /* Debug */,
+				D40E839F28532AEA005C2F17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D40E83A028532AEA005C2F17 /* Build configuration list for PBXNativeTarget "Cehat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D40E83A128532AEA005C2F17 /* Debug */,
+				D40E83A228532AEA005C2F17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D40E83A328532AEA005C2F17 /* Build configuration list for PBXNativeTarget "CehatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D40E83A428532AEA005C2F17 /* Debug */,
+				D40E83A528532AEA005C2F17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D40E83A628532AEA005C2F17 /* Build configuration list for PBXNativeTarget "CehatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D40E83A728532AEA005C2F17 /* Debug */,
+				D40E83A828532AEA005C2F17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D40E837F28532AE9005C2F17 /* Cehat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D40E838028532AE9005C2F17 /* Cehat.xcdatamodel */,
+			);
+			currentVersion = D40E838028532AE9005C2F17 /* Cehat.xcdatamodel */;
+			path = Cehat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D40E836B28532AE9005C2F17 /* Project object */;
+}
