@@ -101,9 +101,10 @@
 		D40E837528532AE9005C2F17 /* Cehat */ = {
 			isa = PBXGroup;
 			children = (
-				D40E83AC28532B1A005C2F17 /* Controller */,
-				D40E83AB28532B10005C2F17 /* View */,
-				D40E83A928532B01005C2F17 /* Model */,
+				D42783CE2857254D00BC5FE5 /* Utilities */,
+				D42783CD2857254300BC5FE5 /* Helper */,
+				D42783C92857250300BC5FE5 /* Themes */,
+				D42783C8285724FD00BC5FE5 /* Feature */,
 				D40E837628532AE9005C2F17 /* AppDelegate.swift */,
 				D40E837828532AE9005C2F17 /* SceneDelegate.swift */,
 				D40E837A28532AE9005C2F17 /* MainViewController.swift */,
@@ -133,25 +134,64 @@
 			path = CehatUITests;
 			sourceTree = "<group>";
 		};
-		D40E83A928532B01005C2F17 /* Model */ = {
+		D42783C8285724FD00BC5FE5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			path = Feature;
 			sourceTree = "<group>";
 		};
-		D40E83AB28532B10005C2F17 /* View */ = {
+		D42783C92857250300BC5FE5 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				D42783CC2857253100BC5FE5 /* Fonts */,
+				D42783CB2857252000BC5FE5 /* UI */,
+				D42783CA2857251C00BC5FE5 /* Colors */,
 			);
-			path = View;
+			path = Themes;
 			sourceTree = "<group>";
 		};
-		D40E83AC28532B1A005C2F17 /* Controller */ = {
+		D42783CA2857251C00BC5FE5 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Controller;
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		D42783CB2857252000BC5FE5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D42783CC2857253100BC5FE5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D42783CD2857254300BC5FE5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D42783CE2857254D00BC5FE5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D42783CF2857255500BC5FE5 /* CoreData */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D42783CF2857255500BC5FE5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
