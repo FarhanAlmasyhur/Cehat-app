@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837628532AE9005C2F17 /* AppDelegate.swift */; };
 		D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837828532AE9005C2F17 /* SceneDelegate.swift */; };
-		D40E837B28532AE9005C2F17 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837A28532AE9005C2F17 /* MainViewController.swift */; };
-		D40E837E28532AE9005C2F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40E837C28532AE9005C2F17 /* Main.storyboard */; };
+		D40E837B28532AE9005C2F17 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837A28532AE9005C2F17 /* NutritionViewController.swift */; };
+		D40E837E28532AE9005C2F17 /* Nutrition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40E837C28532AE9005C2F17 /* Nutrition.storyboard */; };
 		D40E838128532AE9005C2F17 /* Cehat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D40E837F28532AE9005C2F17 /* Cehat.xcdatamodeld */; };
 		D40E838328532AEA005C2F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40E838228532AEA005C2F17 /* Assets.xcassets */; };
 		D40E838628532AEA005C2F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40E838428532AEA005C2F17 /* LaunchScreen.storyboard */; };
@@ -40,8 +40,8 @@
 		D40E837328532AE9005C2F17 /* Cehat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cehat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40E837628532AE9005C2F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D40E837828532AE9005C2F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D40E837A28532AE9005C2F17 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		D40E837D28532AE9005C2F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D40E837A28532AE9005C2F17 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
+		D40E837D28532AE9005C2F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Nutrition.storyboard; sourceTree = "<group>"; };
 		D40E838028532AE9005C2F17 /* Cehat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cehat.xcdatamodel; sourceTree = "<group>"; };
 		D40E838228532AEA005C2F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D40E838528532AEA005C2F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,14 +101,12 @@
 		D40E837528532AE9005C2F17 /* Cehat */ = {
 			isa = PBXGroup;
 			children = (
-				D42783CE2857254D00BC5FE5 /* Utilities */,
+				D42783C8285724FD00BC5FE5 /* Feature */,
 				D42783CD2857254300BC5FE5 /* Helper */,
 				D42783C92857250300BC5FE5 /* Themes */,
-				D42783C8285724FD00BC5FE5 /* Feature */,
+				D42783CE2857254D00BC5FE5 /* Utilities */,
 				D40E837628532AE9005C2F17 /* AppDelegate.swift */,
 				D40E837828532AE9005C2F17 /* SceneDelegate.swift */,
-				D40E837A28532AE9005C2F17 /* MainViewController.swift */,
-				D40E837C28532AE9005C2F17 /* Main.storyboard */,
 				D40E838228532AEA005C2F17 /* Assets.xcassets */,
 				D40E838428532AEA005C2F17 /* LaunchScreen.storyboard */,
 				D40E838728532AEA005C2F17 /* Info.plist */,
@@ -137,6 +135,8 @@
 		D42783C8285724FD00BC5FE5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				D42783D7285750E900BC5FE5 /* Menu */,
+				D42783D028573AD200BC5FE5 /* NutritionTracking */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -192,6 +192,118 @@
 			children = (
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D42783D028573AD200BC5FE5 /* NutritionTracking */ = {
+			isa = PBXGroup;
+			children = (
+				D42783D228573B1500BC5FE5 /* Pages */,
+				D42783D128573B0A00BC5FE5 /* Model */,
+			);
+			path = NutritionTracking;
+			sourceTree = "<group>";
+		};
+		D42783D128573B0A00BC5FE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D42783D228573B1500BC5FE5 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				D42783D6285750D400BC5FE5 /* Controller */,
+				D42783D4285750C300BC5FE5 /* View */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		D42783D4285750C300BC5FE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D40E837C28532AE9005C2F17 /* Nutrition.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D42783D6285750D400BC5FE5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D40E837A28532AE9005C2F17 /* NutritionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D42783D7285750E900BC5FE5 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D42783D92857512000BC5FE5 /* Model */,
+				D42783D82857511900BC5FE5 /* Pages */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		D42783D82857511900BC5FE5 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				D42783DB2857512E00BC5FE5 /* DetailMenu */,
+				D42783DA2857512600BC5FE5 /* ListMenu */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		D42783D92857512000BC5FE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D42783DA2857512600BC5FE5 /* ListMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D42783DD2857513D00BC5FE5 /* Controller */,
+				D42783DC2857513600BC5FE5 /* View */,
+			);
+			path = ListMenu;
+			sourceTree = "<group>";
+		};
+		D42783DB2857512E00BC5FE5 /* DetailMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D42783DF2857514800BC5FE5 /* Controller */,
+				D42783DE2857514400BC5FE5 /* View */,
+			);
+			path = DetailMenu;
+			sourceTree = "<group>";
+		};
+		D42783DC2857513600BC5FE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D42783DD2857513D00BC5FE5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D42783DE2857514400BC5FE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D42783DF2857514800BC5FE5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +412,7 @@
 			files = (
 				D40E838628532AEA005C2F17 /* LaunchScreen.storyboard in Resources */,
 				D40E838328532AEA005C2F17 /* Assets.xcassets in Resources */,
-				D40E837E28532AE9005C2F17 /* Main.storyboard in Resources */,
+				D40E837E28532AE9005C2F17 /* Nutrition.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D40E837B28532AE9005C2F17 /* MainViewController.swift in Sources */,
+				D40E837B28532AE9005C2F17 /* NutritionViewController.swift in Sources */,
 				D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */,
 				D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */,
 				D40E838128532AE9005C2F17 /* Cehat.xcdatamodeld in Sources */,
@@ -365,12 +477,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D40E837C28532AE9005C2F17 /* Main.storyboard */ = {
+		D40E837C28532AE9005C2F17 /* Nutrition.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D40E837D28532AE9005C2F17 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Nutrition.storyboard;
 			sourceTree = "<group>";
 		};
 		D40E838428532AEA005C2F17 /* LaunchScreen.storyboard */ = {
