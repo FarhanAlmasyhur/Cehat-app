@@ -13,7 +13,7 @@ class NutritionViewController: UIViewController, UITableViewDelegate, UITableVie
     
     private let tableView: UITableView = {
         let table = UITableView()
-        table.register(NutritionTableViewCell.nib(), forCellReuseIdentifier: "NutritionCell")
+        table.register(NutritionTableViewCell.nib(), forCellReuseIdentifier: "NutritionTableViewCell")
         return table
     }()
 
@@ -21,21 +21,17 @@ class NutritionViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.addSubview(tableView)
+        tableView.frame = view.bounds
         tableView.delegate = self
         tableView.dataSource = self
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        tableView.frame = view.bounds
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NutritionCell", for: indexPath) as! NutritionTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NutritionTableViewCell", for: indexPath) as! NutritionTableViewCell
         cell.configure(with: "icon-karbo")
         return cell
     }

@@ -18,7 +18,7 @@ class NutritionTableViewCell: UITableViewCell {
     
     
     static func nib() -> UINib{
-        return UINib(nibName: "NutritionCell", bundle: nil)
+        return UINib(nibName: "NutritionTableViewCell", bundle: nil)
     }
     
     public func configure(with imageName: String){
