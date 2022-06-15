@@ -21,11 +21,6 @@ class NutritionTableViewCell: UITableViewCell {
         return UINib(nibName: "NutritionTableViewCell", bundle: nil)
     }
     
-    public func configure(with imageName: String){
-        nutritionIconImage.image = UIImage(named: imageName)
-    }
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

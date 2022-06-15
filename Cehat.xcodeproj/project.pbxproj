@@ -10,11 +10,13 @@
 		526EED862857A77C00C92E13 /* OnBoardingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526EED852857A77C00C92E13 /* OnBoardingPage.storyboard */; };
 		5278CC0B285CDC1F00D2D9B9 /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278CC0A285CDC1F00D2D9B9 /* OnBoardingPage.swift */; };
 		AFAD3A1828645D6A0073AC65 /* OnBoardingPage + CustomizeNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD3A1728645D6A0073AC65 /* OnBoardingPage + CustomizeNextButton.swift */; };
+		AF7274102858E654008AADF2 /* NutritionSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72740F2858E654008AADF2 /* NutritionSeeder.swift */; };
+		AF7274122858E96E008AADF2 /* NutritionStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7274112858E96E008AADF2 /* NutritionStructure.swift */; };
+		AF7274142859C3C3008AADF2 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7274132859C3C3008AADF2 /* NutritionViewController.swift */; };
 		AFB3F34828579652002EA297 /* NutritionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */; };
 		AFB3F34928579652002EA297 /* NutritionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */; };
 		D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837628532AE9005C2F17 /* AppDelegate.swift */; };
 		D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837828532AE9005C2F17 /* SceneDelegate.swift */; };
-		D40E837B28532AE9005C2F17 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837A28532AE9005C2F17 /* NutritionViewController.swift */; };
 		D40E837E28532AE9005C2F17 /* Nutrition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40E837C28532AE9005C2F17 /* Nutrition.storyboard */; };
 		D40E838128532AE9005C2F17 /* Cehat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D40E837F28532AE9005C2F17 /* Cehat.xcdatamodeld */; };
 		D40E838328532AEA005C2F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40E838228532AEA005C2F17 /* Assets.xcassets */; };
@@ -53,12 +55,14 @@
 		526EED852857A77C00C92E13 /* OnBoardingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoardingPage.storyboard; sourceTree = "<group>"; };
 		5278CC0A285CDC1F00D2D9B9 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
 		AFAD3A1728645D6A0073AC65 /* OnBoardingPage + CustomizeNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnBoardingPage + CustomizeNextButton.swift"; sourceTree = "<group>"; };
+		AF72740F2858E654008AADF2 /* NutritionSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionSeeder.swift; sourceTree = "<group>"; };
+		AF7274112858E96E008AADF2 /* NutritionStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionStructure.swift; sourceTree = "<group>"; };
+		AF7274132859C3C3008AADF2 /* NutritionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 		AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTableViewCell.swift; sourceTree = "<group>"; };
 		AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionTableViewCell.xib; sourceTree = "<group>"; };
 		D40E837328532AE9005C2F17 /* Cehat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cehat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40E837628532AE9005C2F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D40E837828532AE9005C2F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D40E837A28532AE9005C2F17 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 		D40E837D28532AE9005C2F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Nutrition.storyboard; sourceTree = "<group>"; };
 		D40E838028532AE9005C2F17 /* Cehat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cehat.xcdatamodel; sourceTree = "<group>"; };
 		D40E838228532AEA005C2F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -273,6 +277,15 @@
 			path = NutritionTracking;
 			sourceTree = "<group>";
 		};
+		D42783D128573B0A00BC5FE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF72740F2858E654008AADF2 /* NutritionSeeder.swift */,
+				AF7274112858E96E008AADF2 /* NutritionStructure.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D42783D228573B1500BC5FE5 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,7 +307,7 @@
 		D42783D6285750D400BC5FE5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D40E837A28532AE9005C2F17 /* NutritionViewController.swift */,
+				AF7274132859C3C3008AADF2 /* NutritionViewController.swift */,
 				AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */,
 			);
 			path = Controller;
@@ -514,10 +527,13 @@
 				D4C83B52286313A900376B96 /* DetailMenuViewController.swift in Sources */,
 				D40E837B28532AE9005C2F17 /* NutritionViewController.swift in Sources */,
 				D4C83B6128636D1000376B96 /* DetailMenuController+UICollectionView.swift in Sources */,
+				AF7274142859C3C3008AADF2 /* NutritionViewController.swift in Sources */,
+				AF7274102858E654008AADF2 /* NutritionSeeder.swift in Sources */,
 				D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */,
 				D4C83B54286313FF00376B96 /* NutrientsCollectionViewCell.swift in Sources */,
 				D4C83B5D2863191E00376B96 /* Nutrients.swift in Sources */,
 				AFB3F34828579652002EA297 /* NutritionTableViewCell.swift in Sources */,
+				AF7274122858E96E008AADF2 /* NutritionStructure.swift in Sources */,
 				D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */,
 				D4C83B5B2863190000376B96 /* Menu.swift in Sources */,
 				5278CC0B285CDC1F00D2D9B9 /* OnBoardingPage.swift in Sources */,
