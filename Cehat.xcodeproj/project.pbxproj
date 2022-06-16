@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		AFB3F34828579652002EA297 /* NutritionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */; };
 		AFB3F34928579652002EA297 /* NutritionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */; };
+		BE29D3A1285A0A03003620B1 /* MenuPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE29D3A0285A0A03003620B1 /* MenuPage.storyboard */; };
+		BE29D3A4285A25EC003620B1 /* MenuPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE29D3A2285A25EC003620B1 /* MenuPageCollectionViewCell.swift */; };
+		BE29D3A5285A25EC003620B1 /* MenuPageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE29D3A3285A25EC003620B1 /* MenuPageCollectionViewCell.xib */; };
+		BE29D3A7285AF20B003620B1 /* MenuPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE29D3A6285AF20B003620B1 /* MenuPageViewController.swift */; };
 		D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837628532AE9005C2F17 /* AppDelegate.swift */; };
 		D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837828532AE9005C2F17 /* SceneDelegate.swift */; };
 		D40E837B28532AE9005C2F17 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837A28532AE9005C2F17 /* NutritionViewController.swift */; };
@@ -41,6 +45,10 @@
 /* Begin PBXFileReference section */
 		AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTableViewCell.swift; sourceTree = "<group>"; };
 		AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionTableViewCell.xib; sourceTree = "<group>"; };
+		BE29D3A0285A0A03003620B1 /* MenuPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuPage.storyboard; sourceTree = "<group>"; };
+		BE29D3A2285A25EC003620B1 /* MenuPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		BE29D3A3285A25EC003620B1 /* MenuPageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuPageCollectionViewCell.xib; sourceTree = "<group>"; };
+		BE29D3A6285AF20B003620B1 /* MenuPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPageViewController.swift; sourceTree = "<group>"; };
 		D40E837328532AE9005C2F17 /* Cehat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cehat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40E837628532AE9005C2F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D40E837828532AE9005C2F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +121,10 @@
 				D40E837828532AE9005C2F17 /* SceneDelegate.swift */,
 				D40E838228532AEA005C2F17 /* Assets.xcassets */,
 				D40E838428532AEA005C2F17 /* LaunchScreen.storyboard */,
+				BE29D3A0285A0A03003620B1 /* MenuPage.storyboard */,
+				BE29D3A2285A25EC003620B1 /* MenuPageCollectionViewCell.swift */,
+				BE29D3A6285AF20B003620B1 /* MenuPageViewController.swift */,
+				BE29D3A3285A25EC003620B1 /* MenuPageCollectionViewCell.xib */,
 				D40E838728532AEA005C2F17 /* Info.plist */,
 				D40E837F28532AE9005C2F17 /* Cehat.xcdatamodeld */,
 			);
@@ -416,6 +428,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE29D3A5285A25EC003620B1 /* MenuPageCollectionViewCell.xib in Resources */,
+				BE29D3A1285A0A03003620B1 /* MenuPage.storyboard in Resources */,
 				D40E838628532AEA005C2F17 /* LaunchScreen.storyboard in Resources */,
 				D40E838328532AEA005C2F17 /* Assets.xcassets in Resources */,
 				AFB3F34928579652002EA297 /* NutritionTableViewCell.xib in Resources */,
@@ -444,7 +458,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE29D3A4285A25EC003620B1 /* MenuPageCollectionViewCell.swift in Sources */,
 				D40E837B28532AE9005C2F17 /* NutritionViewController.swift in Sources */,
+				BE29D3A7285AF20B003620B1 /* MenuPageViewController.swift in Sources */,
 				D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */,
 				AFB3F34828579652002EA297 /* NutritionTableViewCell.swift in Sources */,
 				D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */,
