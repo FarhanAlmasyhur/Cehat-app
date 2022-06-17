@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AFB3F34828579652002EA297 /* NutritionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */; };
 		AFB3F34928579652002EA297 /* NutritionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */; };
+		526EED862857A77C00C92E13 /* OnBoardingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526EED852857A77C00C92E13 /* OnBoardingPage.storyboard */; };
+		5278CC0B285CDC1F00D2D9B9 /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278CC0A285CDC1F00D2D9B9 /* OnBoardingPage.swift */; };
 		D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837628532AE9005C2F17 /* AppDelegate.swift */; };
 		D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837828532AE9005C2F17 /* SceneDelegate.swift */; };
 		D40E837B28532AE9005C2F17 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837A28532AE9005C2F17 /* NutritionViewController.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTableViewCell.swift; sourceTree = "<group>"; };
 		AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionTableViewCell.xib; sourceTree = "<group>"; };
+		526EED852857A77C00C92E13 /* OnBoardingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoardingPage.storyboard; sourceTree = "<group>"; };
+		5278CC0A285CDC1F00D2D9B9 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
 		D40E837328532AE9005C2F17 /* Cehat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cehat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40E837628532AE9005C2F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D40E837828532AE9005C2F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 			children = (
 				D42783D228573B1500BC5FE5 /* Pages */,
 				D42783D128573B0A00BC5FE5 /* Model */,
+				526EED852857A77C00C92E13 /* OnBoardingPage.storyboard */,
+				5278CC0A285CDC1F00D2D9B9 /* OnBoardingPage.swift */,
 			);
 			path = NutritionTracking;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526EED862857A77C00C92E13 /* OnBoardingPage.storyboard in Resources */,
 				D40E838628532AEA005C2F17 /* LaunchScreen.storyboard in Resources */,
 				D4C83B502863137100376B96 /* DetailMenu.storyboard in Resources */,
 				D40E838328532AEA005C2F17 /* Assets.xcassets in Resources */,
@@ -478,6 +485,7 @@
 				AFB3F34828579652002EA297 /* NutritionTableViewCell.swift in Sources */,
 				D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */,
 				D4C83B5B2863190000376B96 /* Menu.swift in Sources */,
+				5278CC0B285CDC1F00D2D9B9 /* OnBoardingPage.swift in Sources */,
 				D40E838128532AE9005C2F17 /* Cehat.xcdatamodeld in Sources */,
 				D4C83B592863147F00376B96 /* Extension.swift in Sources */,
 				D4C83B5F28636CDE00376B96 /* BulletListHelper.swift in Sources */,
@@ -662,7 +670,7 @@
 				INFOPLIST_FILE = Cehat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Nutrition;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnBoardingPage;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -690,7 +698,7 @@
 				INFOPLIST_FILE = Cehat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Nutrition;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnBoardingPage;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
