@@ -15,16 +15,6 @@ struct NutritionSeeder {
         .macro, .micro
     ]
     
-//    func seedNutrition() -> [NutritionStructure]{
-//        var arrOfNutritionSeeder = [NutritionStructure]()
-//
-//        arrOfNutritionSeeder.append(NutritionStructure.init(nutritionImage: ["icon-karbo", "icon-protein", "icon-lemak"], categoryNutrition: "Makronutrien", labelNutrition: ["Karbohidrat", "Protein", "Lemak"], percentage: ["68%", "28%", "50%"], detailNutrition: ["68gr dari total 100gr", "8gr dari total 100gr", "50gr dari total 100gr"]))
-//
-//        arrOfNutritionSeeder.append(NutritionStructure.init(nutritionImage: ["icon-vitamin", "icon-vitamin", "icon-vitamin", "icon-vitamin", "icon-vitamin", "icon-vitamin", "icon-vitamin"], categoryNutrition: "Mikronutrien", labelNutrition: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D", "Vitamin E", "Zat Besi", "Zinc"], percentage: ["68%", "68%", "68%", "68%", "68%", "68%", "68%"], detailNutrition: ["68gr dari total 100gr", "68gr dari total 100gr", "68gr dari total 100gr", "68gr dari total 100gr", "68gr dari total 100gr", "68gr dari total 100gr", "68gr dari total 100gr"]))
-//
-//        return arrOfNutritionSeeder
-//    }
-    
     init(){
         let macroNutrition1 = NutritionStructure(nutritionImage:"icon-karbo", labelNutrition: "Karbohidrat", categoryNutrition: .macro, percentage: "68%", detailNutrition: "68gr dari total 100gr")
 
@@ -42,9 +32,9 @@ struct NutritionSeeder {
 
         let microNutrition5 = NutritionStructure(nutritionImage:"icon-vitamin", labelNutrition: "Vitamin E", categoryNutrition: .micro, percentage: "68%", detailNutrition: "68gr dari total 100gr")
 
-        let microNutrition6 = NutritionStructure(nutritionImage:"icon-vitamin", labelNutrition: "Zinc", categoryNutrition: .micro, percentage: "68%", detailNutrition: "68gr dari total 100gr")
+        let microNutrition6 = NutritionStructure(nutritionImage:"icon-zinc", labelNutrition: "Zinc", categoryNutrition: .micro, percentage: "68%", detailNutrition: "68gr dari total 100gr")
 
-        let microNutrition7 = NutritionStructure(nutritionImage:"icon-vitamin", labelNutrition: "Zat Besi", categoryNutrition: .micro, percentage: "68%", detailNutrition: "68gr dari total 100gr")
+        let microNutrition7 = NutritionStructure(nutritionImage:"icon-zat-besi", labelNutrition: "Zat Besi", categoryNutrition: .micro, percentage: "68%", detailNutrition: "68gr dari total 100gr")
 
         arrOfNutritionSeeder.append(macroNutrition1)
         arrOfNutritionSeeder.append(macroNutrition2)

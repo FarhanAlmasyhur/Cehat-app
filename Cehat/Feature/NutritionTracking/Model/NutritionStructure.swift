@@ -8,8 +8,8 @@
 import Foundation
 
 enum NutritionType: String, CaseIterable {
-    case macro = "Macro"
-    case micro = "Micro"
+    case macro = "Makronutrien"
+    case micro = "Mikronutrien"
 }
 
 struct NutritionStructure {
@@ -21,20 +21,3 @@ struct NutritionStructure {
     let detailNutrition:String
 
 }
-
-//class NutritionStructure {
-//    var nutritionImage:[String]
-//    var categoryNutrition:String
-//    var labelNutrition: [String]
-//    var percentage:[String]
-//    var detailNutrition:[String]
-//
-//    init(nutritionImage: [String], categoryNutrition: String, labelNutrition: [String], percentage: [String], detailNutrition: [String]){
-//        self.nutritionImage = nutritionImage
-//        self.categoryNutrition = categoryNutrition
-//        self.labelNutrition = labelNutrition
-//        self.percentage = percentage
-//        self.detailNutrition = detailNutrition
-//        
-//    }
-//}
