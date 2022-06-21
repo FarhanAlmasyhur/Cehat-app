@@ -16,6 +16,7 @@
 		AF72741F285CC8A1008AADF2 /* NutritientBarProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72741E285CC8A1008AADF2 /* NutritientBarProgressController.swift */; };
 		AF72742728605F44008AADF2 /* HexColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72742628605F44008AADF2 /* HexColorExtension.swift */; };
 		AF727429286068B4008AADF2 /* NutritionViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF727428286068B4008AADF2 /* NutritionViewController + TableView.swift */; };
+		AF72742B286075D2008AADF2 /* NutritionTableViewCell + Extension UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72742A286075D2008AADF2 /* NutritionTableViewCell + Extension UITableViewCell.swift */; };
 		AFB3F34828579652002EA297 /* NutritionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */; };
 		AFB3F34928579652002EA297 /* NutritionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */; };
 		D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837628532AE9005C2F17 /* AppDelegate.swift */; };
@@ -62,8 +63,9 @@
 		AF7274112858E96E008AADF2 /* NutritionStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionStructure.swift; sourceTree = "<group>"; };
 		AF7274132859C3C3008AADF2 /* NutritionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 		AF72741E285CC8A1008AADF2 /* NutritientBarProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritientBarProgressController.swift; sourceTree = "<group>"; };
-		AF72742628605F44008AADF2 /* HexColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HexColorExtension.swift; path = Cehat/Feature/NutritionTracking/Pages/Controller/HexColorExtension.swift; sourceTree = SOURCE_ROOT; };
+		AF72742628605F44008AADF2 /* HexColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HexColorExtension.swift; path = Cehat/Themes/Colors/HexColorExtension.swift; sourceTree = SOURCE_ROOT; };
 		AF727428286068B4008AADF2 /* NutritionViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NutritionViewController + TableView.swift"; sourceTree = "<group>"; };
+		AF72742A286075D2008AADF2 /* NutritionTableViewCell + Extension UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NutritionTableViewCell + Extension UITableViewCell.swift"; sourceTree = "<group>"; };
 		AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTableViewCell.swift; sourceTree = "<group>"; };
 		AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionTableViewCell.xib; sourceTree = "<group>"; };
 		D40E837328532AE9005C2F17 /* Cehat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cehat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,14 +169,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		AF72742228605D97008AADF2 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				AF72742628605F44008AADF2 /* HexColorExtension.swift */,
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
 		AF72742328605E2C008AADF2 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +189,14 @@
 			children = (
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AFAD3A11286211170073AC65 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				AF72742628605F44008AADF2 /* HexColorExtension.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		D40E836A28532AE9005C2F17 = {
@@ -264,7 +266,7 @@
 		D42783C92857250300BC5FE5 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				AF72742228605D97008AADF2 /* Colors */,
+				AFAD3A11286211170073AC65 /* Colors */,
 				AF72742128605D8F008AADF2 /* Fonts */,
 				AF72742028605D7C008AADF2 /* UI */,
 			);
@@ -359,6 +361,7 @@
 				AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */,
 				AF72741E285CC8A1008AADF2 /* NutritientBarProgressController.swift */,
 				AF727428286068B4008AADF2 /* NutritionViewController + TableView.swift */,
+				AF72742A286075D2008AADF2 /* NutritionTableViewCell + Extension UITableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				D4C83B5D2863191E00376B96 /* Nutrients.swift in Sources */,
 				AFB3F34828579652002EA297 /* NutritionTableViewCell.swift in Sources */,
 				AF72742728605F44008AADF2 /* HexColorExtension.swift in Sources */,
+				AF72742B286075D2008AADF2 /* NutritionTableViewCell + Extension UITableViewCell.swift in Sources */,
 				AF727429286068B4008AADF2 /* NutritionViewController + TableView.swift in Sources */,
 				AF72741F285CC8A1008AADF2 /* NutritientBarProgressController.swift in Sources */,
 				AF7274122858E96E008AADF2 /* NutritionStructure.swift in Sources */,

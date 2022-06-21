@@ -26,6 +26,7 @@ class NutritionTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+//        shadowDecorate()
         // add shadow on cell
         backgroundColor = .clear
         layer.masksToBounds = false
