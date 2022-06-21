@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ELe-CK-FyZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F58-yd-Duh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Nutrition View Controller-->
+        <!--NutrientPage-->
         <scene sceneID="CEM-bk-g6Z">
             <objects>
-                <viewController id="ELe-CK-FyZ" customClass="NutritionViewController" customModule="Cehat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="NutrientPage" id="ELe-CK-FyZ" customClass="NutritionViewController" customModule="Cehat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dql-KW-j89">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pj6-nU-Q6N">
-                                <rect key="frame" x="0.0" y="304" width="414" height="558"/>
+                                <rect key="frame" x="0.0" y="304" width="414" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -30,16 +30,53 @@
                             <constraint firstItem="Pj6-nU-Q6N" firstAttribute="bottom" secondItem="90x-ia-gSg" secondAttribute="bottom" id="zVT-hX-BuE"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Nutrient" image="chart.bar" catalog="system" id="STS-1t-ZEo"/>
                     <connections>
                         <outlet property="tableView" destination="Pj6-nU-Q6N" id="lH3-Hx-Px6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HsS-9t-RjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2120.289855072464" y="-49.553571428571423"/>
+            <point key="canvasLocation" x="222" y="-694"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="E1W-7Y-l9H">
+            <objects>
+                <viewController id="Xp3-u8-0pP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gUx-rf-Gcz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TUT-rU-Yzo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Menu" image="fork.knife" catalog="system" id="bbZ-8r-MEm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njB-rZ-EmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="222" y="35"/>
+        </scene>
+        <!--HomePage-->
+        <scene sceneID="KiL-1t-yxr">
+            <objects>
+                <tabBarController title="HomePage" id="F58-yd-Duh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zhN-t6-BPw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ELe-CK-FyZ" kind="relationship" relationship="viewControllers" id="Shp-Ig-DrG"/>
+                        <segue destination="Xp3-u8-0pP" kind="relationship" relationship="viewControllers" id="yaw-La-BkY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="leJ-fQ-Vqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-667" y="-268"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chart.bar" catalog="system" width="128" height="90"/>
+        <image name="fork.knife" catalog="system" width="92" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
