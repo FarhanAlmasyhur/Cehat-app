@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9B-9v-2kt">
-                        <rect key="frame" x="15" y="8" width="361" height="88"/>
+                        <rect key="frame" x="15" y="8" width="361" height="87.666666666666671"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Of-Rj-aab">
                                 <rect key="frame" x="20" y="26" width="40" height="40"/>
@@ -28,27 +28,33 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="MB3-Zb-bzR">
-                                <rect key="frame" x="87" y="14" width="193" height="60"/>
+                                <rect key="frame" x="87" y="13.999999999999996" width="209" height="59.666666666666657"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Karbohidrat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAv-LE-6NY">
-                                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Karbohidrat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAv-LE-6NY">
+                                        <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="19.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="sW8-sH-PI0" customClass="ProgressView" customModule="Cehat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="30.5" width="193" height="4"/>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-I8-MvJ">
+                                        <rect key="frame" x="0.0" y="30.333333333333336" width="200" height="4"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="0h9-HY-5kd"/>
+                                        </constraints>
                                     </progressView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="68gr dari total 100gr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zp-YA-DH8">
-                                        <rect key="frame" x="0.0" y="45.5" width="117" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="68gr dari total 100gr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zp-YA-DH8">
+                                        <rect key="frame" x="0.0" y="45.333333333333329" width="117" height="14.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4q-s9-OZN">
-                                <rect key="frame" x="300" y="34" width="34.5" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="60%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4q-s9-OZN">
+                                <rect key="frame" x="305" y="34" width="40" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="Nvy-rO-ilQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -61,8 +67,8 @@
                             <constraint firstItem="MB3-Zb-bzR" firstAttribute="top" secondItem="J9B-9v-2kt" secondAttribute="top" constant="14" id="C1p-OX-A3c"/>
                             <constraint firstItem="0Of-Rj-aab" firstAttribute="leading" secondItem="J9B-9v-2kt" secondAttribute="leading" constant="20" id="Iwo-bp-5hX"/>
                             <constraint firstAttribute="bottom" secondItem="0Of-Rj-aab" secondAttribute="bottom" constant="26" id="VAE-Jg-LTv"/>
-                            <constraint firstAttribute="trailing" secondItem="A4q-s9-OZN" secondAttribute="trailing" constant="26.5" id="nfn-rb-np4"/>
-                            <constraint firstItem="A4q-s9-OZN" firstAttribute="leading" secondItem="MB3-Zb-bzR" secondAttribute="trailing" constant="20" id="qSr-Uu-mjH"/>
+                            <constraint firstAttribute="trailing" secondItem="A4q-s9-OZN" secondAttribute="trailing" constant="15" id="nfn-rb-np4"/>
+                            <constraint firstItem="A4q-s9-OZN" firstAttribute="leading" secondItem="MB3-Zb-bzR" secondAttribute="trailing" constant="15" id="qSr-Uu-mjH"/>
                             <constraint firstItem="MB3-Zb-bzR" firstAttribute="leading" secondItem="0Of-Rj-aab" secondAttribute="trailing" constant="27" id="rg1-fg-6Cs"/>
                             <constraint firstAttribute="bottom" secondItem="MB3-Zb-bzR" secondAttribute="bottom" constant="14" id="sjc-xp-gmb"/>
                             <constraint firstAttribute="bottom" secondItem="A4q-s9-OZN" secondAttribute="bottom" constant="34" id="zCG-sK-J2K"/>
@@ -84,12 +90,12 @@
                 <outlet property="barProgressPercentage" destination="A4q-s9-OZN" id="sqU-lt-kDr"/>
                 <outlet property="containerView" destination="H2p-sc-9uM" id="GhX-gl-se1"/>
                 <outlet property="contentsView" destination="J9B-9v-2kt" id="A5C-Kx-z17"/>
-                <outlet property="nutrientBarProgress" destination="sW8-sH-PI0" id="XC7-cj-zDE"/>
+                <outlet property="nutrientProgBar2" destination="TCd-I8-MvJ" id="tgs-lt-DJJ"/>
                 <outlet property="nutritionDescription" destination="8zp-YA-DH8" id="QaF-Hk-CvS"/>
                 <outlet property="nutritionIconImage" destination="0Of-Rj-aab" id="3vr-QN-y9e"/>
                 <outlet property="nutritionLabel" destination="OAv-LE-6NY" id="RNa-Xe-5Pt"/>
             </connections>
-            <point key="canvasLocation" x="163.768115942029" y="105.80357142857143"/>
+            <point key="canvasLocation" x="163.07692307692307" y="105.21327014218009"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -18,6 +18,34 @@ class NutritionViewController: UIViewController {
     var dictOfArr: [NutritionType: [NutritionStructure]] = [:]
     var nutritionType: [NutritionType] = [.macro, .micro]
     
+    //Data Dummy Menu Makanan
+    var caloriDailyMaks = 0.0
+    var indexSelect : Int?
+    var selected = "Sup Ayam"
+    var menuMakanan = ["Sup Ayam","Stim Ikan","Sup Bihun","Kacang Panjang","Nasi Goreng"]
+    var kalori = [96.0,75.0,140.0,80.0,100.0]
+    var karbohidrat = [20,10,5,0,10]
+    var protein = [20,10,5,0,10]
+    var lemak = [3,9,6,0,1]
+    var vitA = [1,1,1,0,0]
+    var vitB = [1,1,1,0,0]
+    var vitC = [1,1,1,0,0]
+    var vitD = [1,1,1,0,0]
+    var vitE = [1,1,1,0,0]
+    var zatBesi = [1,1,1,0,0]
+    var zinc = [1,1,1,0,0]
+    var klri = 0.0
+    var karbo = 0
+    var pro = 0
+    var lem = 0
+    var vA = 0
+    var vB = 0
+    var vC = 0
+    var vD = 0
+    var vE = 0
+    var zBes = 0
+    var znc = 0
+    
     lazy var bgRect: UIView = {
         let v = UIView()
         v.backgroundColor = UIColor(hex: 0x507B3E)
@@ -63,7 +91,25 @@ class NutritionViewController: UIViewController {
         v.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         v.textColor = UIColor(hex: 0x000000)
         v.frame = CGRect(x: 42, y: 165, width: 178, height: 93)
-        v.text = "Kebutuhan anak Anda belum terpenuhi, ayo berikan makanan untuk memenuhinya"
+        var percentCalori = 68
+        
+        if percentCalori <= 25 {
+            v.text = "Kebutuhan anak Anda belum terpenuhi, ayo berikan makanan untuk memenuhinya"
+        }
+        //
+        else if (percentCalori > 25) && (percentCalori <= 50) {
+            v.text = "Kebutuhan anak Anda masih kurang, ayo berikan makanan untuk memenuhinya"
+        }
+        
+        else if (percentCalori > 50) && (percentCalori <= 75) {
+            v.text = "Terus lanjutkan memberikan nutrisi untuk memenuhi kebutuhan anak Anda"
+        }
+      
+        else {
+     
+            v.text = "Selamat ! Anda telah berhasil memenuhi kebutuhan nutrisis harian anak"
+        }
+
         v.isScrollEnabled = false
         v.isSelectable = false
 
@@ -72,30 +118,82 @@ class NutritionViewController: UIViewController {
     
     lazy var barProgressPercentage: UILabel = {
         let v = UILabel()
-        v.font = UIFont.boldSystemFont(ofSize: 24)
+        v.font = UIFont.boldSystemFont(ofSize: 18)
         v.textColor = UIColor(hex: 0xE88429)
-        v.frame = CGRect(x: 267, y: 172, width: 55, height: 35)
-        v.text = "14%"
+        v.frame = CGRect(x: 270, y: 172, width: 55, height: 35)
+        
+        
+        v.text = String(format:"%.1f", 100*klri/caloriDailyMaks)+"%"
 
         return v
     }()
     
     lazy var detailKalori: UILabel = {
         let v = UILabel()
-        v.font = UIFont.boldSystemFont(ofSize: 16)
+        v.font = UIFont.boldSystemFont(ofSize: 15)
         v.textColor = UIColor(hex: 0x000000)
-        v.frame = CGRect(x: 246.5, y: 235, width: 97, height: 19)
-        v.text = "75/550 Kkal"
-
+        v.frame = CGRect(x: 246.5, y: 240, width: 97, height: 19)
+        
+        v.text = String(Int(klri)) + "/" + String(Int(caloriDailyMaks)) + " kkal"
         return v
     }()
     
+    lazy var barRectangle: UIView = {
+        let v = UIView()
+        
+       // var endAngle =
+    
+        let circlePath1 = UIBezierPath(arcCenter: CGPoint(x: 291, y:187), radius: 41, startAngle: .pi*3/2, endAngle: .pi*7/2 , clockwise: true)
+        let circlePath2 = UIBezierPath(arcCenter: CGPoint(x: 291, y:187), radius: 41, startAngle: .pi*3/2, endAngle: -(.pi*2*CGFloat(klri/caloriDailyMaks))+(.pi*3/2) , clockwise: false)
+    
+        let shape1 = CAShapeLayer()
+        let shape2 = CAShapeLayer()
+
+        shape1.path = circlePath1.cgPath
+        shape2.path = circlePath2.cgPath
+        
+        shape1.lineWidth = 14
+        shape2.lineWidth = 14
+        
+        shape1.strokeColor = UIColor.myGrayBar?.cgColor
+        shape2.strokeColor = UIColor.blue.cgColor
+        
+        var percentCalori = 10
+        
+        if percentCalori <= 25 {
+            shape2.strokeColor = UIColor.myRedBar?.cgColor
+        }
+        
+        else if (percentCalori > 25) && (percentCalori <= 50) {
+            shape2.strokeColor = UIColor.myOrangeBar?.cgColor
+        }
+        
+        else if (percentCalori > 50) && (percentCalori <= 75) {
+            shape2.strokeColor = UIColor.myGreenBar?.cgColor
+        }
+        //
+        else {
+            shape2.strokeColor = UIColor.myDarkGreen?.cgColor
+        }
+
+        shape1.fillColor = UIColor.clear.cgColor
+        shape2.fillColor = UIColor.clear.cgColor
+        
+        v.layer.addSublayer(shape1)
+        v.layer.addSublayer(shape2)
+
+        return v
+    }()
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        agechild()
+        addKalori()
+        
         tableView.register(NutritionTableViewCell.nib(), forCellReuseIdentifier: "NutritionTableViewCell")
         arrOfNutrition = nutritionSeeder.arrOfNutritionSeeder
         tableView.frame = view.bounds
@@ -112,60 +210,27 @@ class NutritionViewController: UIViewController {
         view.addSubview(subHeaderContent)
         view.addSubview(barProgressPercentage)
         view.addSubview(detailKalori)
+        view.addSubview(barRectangle)
+    }
         
-//        let myRect = UIView(frame: CGRect(x: 20, y: 20, width: 200, height: 50))
-//        myRect.roundCorners(corners: [.topRight, .topLeft])
-//        myrect = UIColor.blue
-//        
-//        dailyPercentCalori.text = String(percentCalori) + "%"
-//        let hitung : Float?
-//        hitung = Float(percentCalori)/100
-//
-//        let circlePath1 = UIBezierPath(arcCenter: CGPoint(x: 310, y:205), radius: 45, startAngle: .pi/2, endAngle: .pi*2.5 , clockwise: true)
-//        let circlePath2 = UIBezierPath(arcCenter: CGPoint(x: 310, y:205), radius: 45, startAngle: -.pi/2, endAngle: ((.pi*2*CGFloat(hitung!)) - (.pi/2)) , clockwise: true)
-//
-//        let shape1 = CAShapeLayer()
-//        let shape2 = CAShapeLayer()
-//
-//        shape1.path = circlePath1.cgPath
-//        shape2.path = circlePath2.cgPath
-//
-//        shape1.lineWidth = 15
-//        shape2.lineWidth = 15
-//
-//        shape1.strokeColor = UIColor.myGrayBar?.cgColor
-//
-//        if percentCalori <= 25 {
-//            shape2.strokeColor = UIColor.myRedBar?.cgColor
-//            DescriptInBar.text = "Kebutuhan anak Anda belum terpenuhi, ayo berikan makanan untuk memenuhinya"
-//        }
-//
-//        else if (percentCalori > 25) && (percentCalori <= 50) {
-//            shape2.strokeColor = UIColor.myOrangeBar?.cgColor
-//            DescriptInBar.text = "Kebutuhan anak Anda masih kurang, ayo berikan makanan untuk memenuhinya"
-//        }
-//
-//        else if (percentCalori > 50) && (percentCalori <= 75) {
-//            shape2.strokeColor = UIColor.myGreenBar?.cgColor
-//            DescriptInBar.text = "Terus lanjutkan memberikan nutrisi untuk memenuhi kebutuhan anak Anda"
-//        }
-//
-//        else {
-//            shape2.strokeColor = UIColor.myDarkGreen?.cgColor
-//            if (percentCalori >= 100) {
-//                DescriptInBar.text = "Selamat ! Anda telah berhasil memenuhi kebutuhan nutrisis harian anak"
-//            }
-//            else {
-//                DescriptInBar.text = "Ayo sedikit lagi, kebutuhan harian anak Anda akan terpenuhi"
-//            }
-//        }
-//
-//        shape1.fillColor = UIColor.clear.cgColor
-//        shape2.fillColor = UIColor.clear.cgColor
-//
-//        view.layer.addSublayer(shape1)
-//        view.layer.addSublayer(shape2)
-
+    
+    func addKalori() {
+        for i in 0...4 {
+            if menuMakanan[i] == selected {
+                indexSelect = i
+            }
+        }
+        klri = klri + kalori[indexSelect!]
+    }
+    
+    func agechild() {
+        let age = 2
+        if (age >= 1) && (age <= 3) {
+            caloriDailyMaks = 1125
+        }
+        else {
+            caloriDailyMaks = 1600
+        }
     }
     
     
@@ -195,6 +260,14 @@ extension UIView {
         let maskedCorners: CACornerMask = CACornerMask(rawValue: createMask(corners: corners))
         layer.maskedCorners = maskedCorners
     }
+}
+
+extension UIColor {
+    static let myDarkGreen = UIColor(named: "DarkGreen")
+    static let myGrayBar = UIColor(named: "GrayBar")
+    static let myRedBar = UIColor(named: "RedBar")
+    static let myOrangeBar = UIColor(named: "OrangeBar")
+    static let myGreenBar = UIColor(named: "GreenBar")
 }
 
 
