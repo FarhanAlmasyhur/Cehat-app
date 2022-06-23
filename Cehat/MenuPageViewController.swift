@@ -21,11 +21,22 @@ class MenuPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.totalCarbo.text = viewTotalCarbo[indexPath.row]
         cell.totalCalory.text = viewTotalCalory[indexPath.row]
         cell.totalProtein.text = viewTotalProtein[indexPath.row]
-        
+        cell.shadowDecorate()
         return cell
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: indexPath) as? MenuPageCollectionViewCell
+        let storyboard = UIStoryboard(name: "Nutrition", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "NutritionViewController") as! NutritionViewController
+        collectionView.deselectItem(at: indexPath, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
+//    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var viewSegmented: UIView!
     @IBOutlet weak var nameEmpty: UILabel!
@@ -58,12 +69,12 @@ class MenuPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
     
-    var menuImages:[String] = ["Stim_Ikan","Tumis_Kangkung","Nasi_Goreng","Salad"]
-    var menuNames:[String] = ["Nasi Goreng","Baso Sapi","Indomie Goreng","Indomie Rebus"]
-    var viewTotalCalory:[String] = ["100gr","50gr","40gr","80gr"]
-    var viewTotalCarbo:[String] = ["100gr","50gr","40gr","80gr"]
-    var viewTotalProtein:[String] = ["100gr","50gr","40gr","80gr"]
-    var viewTotalFat:[String] = ["100gr","50gr","40gr","80gr"]
+    var menuImages:[String] = ["Stim_Ikan","Tumis_Kangkung","Nasi_Goreng","Salad","Salad","Salad"]
+    var menuNames:[String] = ["Nasi Goreng","Baso Sapi","Indomie Goreng","Indomie Rebus","Indomie Rebus","Indomie Rebus"]
+    var viewTotalCalory:[String] = ["100gr","50gr","40gr","80gr","80gr","80gr"]
+    var viewTotalCarbo:[String] = ["100gr","50gr","40gr","80gr","80gr","80gr"]
+    var viewTotalProtein:[String] = ["100gr","50gr","40gr","80gr","80gr","80gr"]
+    var viewTotalFat:[String] = ["100gr","50gr","40gr","80gr","80gr","80gr"]
     
     
     override func viewDidLoad() {
@@ -75,10 +86,22 @@ class MenuPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         let nibCell = UINib(nibName: "MenuPageCollectionViewCell", bundle: nil)
         menuCollectionView.register(nibCell, forCellWithReuseIdentifier: "cell")
     }
+}
+
+extension UICollectionViewCell {
+    func shadowDecorate() {
+        let radius: CGFloat = 10
+        contentView.layer.cornerRadius = radius
+        contentView.layer.borderWidth = 1
+        contentView.layer.borderColor = UIColor.clear.cgColor
+        contentView.layer.masksToBounds = true
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-             //Do your logic here
-
-        }
-
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        layer.shadowRadius = 2.0
+        layer.shadowOpacity = 0.5
+        layer.masksToBounds = false
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: radius).cgPath
+        layer.cornerRadius = radius
+    }
 }
