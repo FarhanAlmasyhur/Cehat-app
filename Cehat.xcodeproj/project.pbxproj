@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		526EED862857A77C00C92E13 /* OnBoardingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526EED852857A77C00C92E13 /* OnBoardingPage.storyboard */; };
+		5278CC0B285CDC1F00D2D9B9 /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278CC0A285CDC1F00D2D9B9 /* OnBoardingPage.swift */; };
+		AFAD3A1828645D6A0073AC65 /* OnBoardingPage + CustomizeNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD3A1728645D6A0073AC65 /* OnBoardingPage + CustomizeNextButton.swift */; };
 		AFB3F34828579652002EA297 /* NutritionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */; };
 		AFB3F34928579652002EA297 /* NutritionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */; };
 		D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837628532AE9005C2F17 /* AppDelegate.swift */; };
@@ -47,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		526EED852857A77C00C92E13 /* OnBoardingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoardingPage.storyboard; sourceTree = "<group>"; };
+		5278CC0A285CDC1F00D2D9B9 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
+		AFAD3A1728645D6A0073AC65 /* OnBoardingPage + CustomizeNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnBoardingPage + CustomizeNextButton.swift"; sourceTree = "<group>"; };
 		AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTableViewCell.swift; sourceTree = "<group>"; };
 		AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionTableViewCell.xib; sourceTree = "<group>"; };
 		D40E837328532AE9005C2F17 /* Cehat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cehat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +104,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFAD3A1228645CDE0073AC65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AFAD3A1328645D050073AC65 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD3A1428645D0F0073AC65 /* Pages */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		AFAD3A1428645D0F0073AC65 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				AFAD3A1528645D220073AC65 /* Controller */,
+				AFAD3A1628645D290073AC65 /* View */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		AFAD3A1528645D220073AC65 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5278CC0A285CDC1F00D2D9B9 /* OnBoardingPage.swift */,
+				AFAD3A1728645D6A0073AC65 /* OnBoardingPage + CustomizeNextButton.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AFAD3A1628645D290073AC65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				526EED852857A77C00C92E13 /* OnBoardingPage.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D40E836A28532AE9005C2F17 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +202,7 @@
 		D42783C8285724FD00BC5FE5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				AFAD3A1328645D050073AC65 /* OnBoarding */,
 				D42783D7285750E900BC5FE5 /* Menu */,
 				D42783D028573AD200BC5FE5 /* NutritionTracking */,
 			);
@@ -219,17 +267,10 @@
 		D42783D028573AD200BC5FE5 /* NutritionTracking */ = {
 			isa = PBXGroup;
 			children = (
+				AFAD3A1228645CDE0073AC65 /* Model */,
 				D42783D228573B1500BC5FE5 /* Pages */,
-				D42783D128573B0A00BC5FE5 /* Model */,
 			);
 			path = NutritionTracking;
-			sourceTree = "<group>";
-		};
-		D42783D128573B0A00BC5FE5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		D42783D228573B1500BC5FE5 /* Pages */ = {
@@ -440,6 +481,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526EED862857A77C00C92E13 /* OnBoardingPage.storyboard in Resources */,
 				D40E838628532AEA005C2F17 /* LaunchScreen.storyboard in Resources */,
 				D4C83B502863137100376B96 /* DetailMenu.storyboard in Resources */,
 				D40E838328532AEA005C2F17 /* Assets.xcassets in Resources */,
@@ -478,9 +520,11 @@
 				AFB3F34828579652002EA297 /* NutritionTableViewCell.swift in Sources */,
 				D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */,
 				D4C83B5B2863190000376B96 /* Menu.swift in Sources */,
+				5278CC0B285CDC1F00D2D9B9 /* OnBoardingPage.swift in Sources */,
 				D40E838128532AE9005C2F17 /* Cehat.xcdatamodeld in Sources */,
 				D4C83B592863147F00376B96 /* Extension.swift in Sources */,
 				D4C83B5F28636CDE00376B96 /* BulletListHelper.swift in Sources */,
+				AFAD3A1828645D6A0073AC65 /* OnBoardingPage + CustomizeNextButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,7 +706,7 @@
 				INFOPLIST_FILE = Cehat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Nutrition;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnBoardingPage;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -690,7 +734,7 @@
 				INFOPLIST_FILE = Cehat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Nutrition;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnBoardingPage;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
