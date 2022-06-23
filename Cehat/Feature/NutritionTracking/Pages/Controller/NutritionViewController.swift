@@ -237,6 +237,7 @@ class NutritionViewController: UIViewController {
 }
 
 extension UIView {
+    
     enum Corner:Int {
         case bottomRight = 0,
         topRight,
