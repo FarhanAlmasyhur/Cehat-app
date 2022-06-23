@@ -44,6 +44,7 @@ class DetailMenuViewController: UIViewController {
         menuDetail.layer.cornerRadius = 20
         listBahan.attributedText = BulletListHelper.createBulletedList(fromStringArray: bahan)
         caraMasak.attributedText = BulletListHelper.createBulletedList(fromStringArray: masak, isNumbered: true)
+        caraMasak.textAlignment = .justified
     }
     
     func setupCollectionView(){

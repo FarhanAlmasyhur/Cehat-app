@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Menu {
+struct Menu: Equatable {
     var name: String?
     var ingredients: [String]?
     var cookStep: [String]?
