@@ -12,6 +12,8 @@ class StaticHistoryRepository: MenuHistoryRepository
     private var historyMenus: [String: [Menu]] = [:]
     private let todaysDate: String = Date.getTodaysDate()
     
+    
+    
     func getHistoryMenu() -> [String:[Menu]]? {
         return historyMenus
     }

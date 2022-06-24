@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias NutrientValue = Int
+typealias NutrientValue = Double
 
 typealias Nutrients = [NutrientValue]
 

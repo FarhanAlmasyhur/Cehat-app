@@ -27,7 +27,7 @@ class CehatHistoryTests: XCTestCase {
     func testAddToFavorite() throws {
         
         let beforeAddCount = favoriteMenu?.count
-        let menu = Menu(name: "tahu", ingredients: ["123"], cookStep: ["123"], age: "1-2 Tahun", nutrients: NutrientsType.list)
+        let menu = Menu(id: 1, name: "tahu", ingredients: ["123"], cookStep: ["123"], nutrients: NutrientsType.list)
         let resultAdd = staticHistory.addToHistory(menu: menu)
         favoriteMenu = staticHistory.getHistoryMenu()
         let tester: [String: [Menu]] = [Date.getTodaysDate(): [menu]]

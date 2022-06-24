@@ -9,9 +9,9 @@ import Foundation
 
 
 struct Menu: Equatable {
-    var name: String?
-    var ingredients: [String]?
-    var cookStep: [String]?
-    var age: String?
-    var nutrients: Nutrients?
+    var id: Int
+    var name: String
+    var ingredients: [String]
+    var cookStep: [String]
+    var nutrients: Nutrients
 }

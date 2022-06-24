@@ -19,7 +19,7 @@ extension DetailMenuViewController: UICollectionViewDataSource {
         
         
         let type = NutrientsType.allCases.first(where: { $0.rawValue == indexPath.row })!
-        let value = menu?.nutrients?[type] ?? 0
+        let value = menu?.nutrients[type] ?? 0
         
         cell.setupCell(with: NutrientsData(nutritionType: type, nutritionValue: value))
         
