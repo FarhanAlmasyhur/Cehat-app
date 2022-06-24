@@ -16,6 +16,9 @@ class MenuPageViewController: UIViewController {
     var viewTotalProtein:[String] = ["100gr","50gr","40gr","80gr","80gr","80gr"]
     var viewTotalFat:[String] = ["100gr","50gr","40gr","80gr","80gr","80gr"]
     
+    let seeder: MenuSeeder = MenuSeeder()
+    var arrayMenu: [Menu] = []
+    
     var filteredMenuNames: [String]!
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -52,6 +55,7 @@ class MenuPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupArray()
         
         //sarchbar
         filteredMenuNames = menuNames
@@ -66,4 +70,9 @@ class MenuPageViewController: UIViewController {
 //    override func viewWillAppear(_ animated: Bool) {
 //            navigationController?.setNavigationBarHidden(true, animated: animated)
 //        }
+    
+    
+    func setupArray(){
+        arrayMenu = seeder.getAllMenu()
+    }
 }

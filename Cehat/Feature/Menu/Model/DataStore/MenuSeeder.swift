@@ -14,7 +14,7 @@ class MenuSeeder
     
     let menu1: Menu = {
         let name: String = "Ayam Goreng"
-        
+        let image: String = "ayamgoreng"
         let ingredients = [
             "50 gram daging ayam"
             ,"1/2 siung bawang putih, tumbuk sedikit kasar"
