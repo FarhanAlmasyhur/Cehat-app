@@ -58,10 +58,12 @@ class MenuPageViewController: UIViewController {
         searchBar.searchTextField.layer.cornerRadius = 20
         searchBar.searchTextField.layer.masksToBounds = true
         searchBar.delegate = self
-        title = "Menu"
         
         //regis xib
         let nibCell = UINib(nibName: "MenuPageCollectionViewCell", bundle: nil)
         menuCollectionView.register(nibCell, forCellWithReuseIdentifier: "cell")
     }
+//    override func viewWillAppear(_ animated: Bool) {
+//            navigationController?.setNavigationBarHidden(true, animated: animated)
+//        }
 }
