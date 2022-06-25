@@ -7,22 +7,24 @@
 
 import Foundation
 
-class StaticFavoriteRepository: MenuFavoriteRepository
+class StaticFavoriteManager: MenuFavoriteRepository
 {
     
     private var favoriteMenus: [Menu] = []
+    private var menuSeeder: MenuSeeder = MenuSeeder()
     
     func getFavoriteMenu() -> [Menu]? {
         return favoriteMenus
     }
     
-    func addToFavorite(menu: Menu) -> Bool {
-        favoriteMenus.append(menu)
+    func addToFavorite(idMenu: Int) -> Bool {
+        guard let favoritedMenu = menuSeeder.getMenuById(idMenu: idMenu) else {return false}
+        favoriteMenus.append(favoritedMenu)
         return true
     }
     
-    func deleteFromFavorite(menu: Menu) -> Bool {
-        if let index = favoriteMenus.firstIndex(where: {$0.name == menu.name}){
+    func deleteFromFavorite(idMenu: Int) -> Bool {
+        if let index = favoriteMenus.firstIndex(where: {$0.id == idMenu}){
             favoriteMenus.remove(at: index)
             return true
         }

@@ -11,14 +11,14 @@ import Foundation
 
 protocol MenuFavoriteRepository {
     func getFavoriteMenu() -> [Menu]?
-    func addToFavorite(menu: Menu) -> Bool
-    func deleteFromFavorite(menu: Menu) -> Bool
+    func addToFavorite(idMenu: Int) -> Bool
+    func deleteFromFavorite(idMenu: Int) -> Bool
     func deleteAllFavorite() -> Bool
 }
 
 protocol MenuHistoryRepository {
     func getHistoryMenu() -> [String:[Menu]]?
-    func addToHistory(menu: Menu) -> Bool
-    func deleteFromHistory(menu: Menu) -> Bool
+    func addToHistory(idMenu: Int) -> Bool
+    func deleteFromHistory(idMenu: Int) -> Bool
     func deleteAllHistory() -> Bool
 }

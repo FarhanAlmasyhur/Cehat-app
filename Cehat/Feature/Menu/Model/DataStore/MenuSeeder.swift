@@ -14,7 +14,7 @@ class MenuSeeder
     
     let menu1: Menu = {
         let name: String = "Ayam Goreng"
-        let image: String = "ayamgoreng"
+//        let image: String = "ayamgoreng"
         let ingredients = [
             "50 gram daging ayam"
             ,"1/2 siung bawang putih, tumbuk sedikit kasar"
@@ -418,5 +418,13 @@ class MenuSeeder
     
     func getAllMenu() -> [Menu] {
         allMenu
+    }
+    
+    func getMenuById(idMenu: Int) -> Menu? {
+        return allMenu.first(where: {$0.id == idMenu})
+    }
+    
+    func makeMenuArraybyId(idMenus: [Int]?) -> [Menu]? {
+        return idMenus?.map{getMenuById(idMenu: $0)!}
     }
 }

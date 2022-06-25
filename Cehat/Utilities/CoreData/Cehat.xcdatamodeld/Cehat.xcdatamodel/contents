@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ManagedFavorite" representedClassName="ManagedFavorite" syncable="YES">
-        <attribute name="idMenu" optional="YES" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="idMenu" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" customClassName="[Int]"/>
     </entity>
     <entity name="ManagedHistory" representedClassName="ManagedHistory" syncable="YES">
         <attribute name="date" optional="YES" attributeType="String"/>

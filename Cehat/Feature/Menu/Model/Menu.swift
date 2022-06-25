@@ -10,7 +10,7 @@ import Foundation
 
 struct Menu: Equatable {
     var id: Int
-    var image: String
+//    var image: String
     var name: String
     var ingredients: [String]
     var cookStep: [String]

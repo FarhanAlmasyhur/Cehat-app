@@ -2,7 +2,7 @@
 //  ManagedFavorite+CoreDataClass.swift
 //  Cehat
 //
-//  Created by Muhammad Farhan Almasyhur on 24/06/22.
+//  Created by Muhammad Farhan Almasyhur on 25/06/22.
 //
 //
 

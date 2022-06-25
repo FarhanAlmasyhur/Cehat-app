@@ -2,7 +2,7 @@
 //  ManagedFavorite+CoreDataProperties.swift
 //  Cehat
 //
-//  Created by Muhammad Farhan Almasyhur on 24/06/22.
+//  Created by Muhammad Farhan Almasyhur on 25/06/22.
 //
 //
 
@@ -16,7 +16,7 @@ extension ManagedFavorite {
         return NSFetchRequest<ManagedFavorite>(entityName: "ManagedFavorite")
     }
 
-    @NSManaged public var idMenu: [Int]?
+    @NSManaged public var idMenu: Int32
 
 }
 

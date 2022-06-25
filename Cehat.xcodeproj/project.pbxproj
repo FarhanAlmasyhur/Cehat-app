@@ -43,8 +43,6 @@
 		D44157132865B09B0075FBB7 /* MenuPageViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D441570E2865B09B0075FBB7 /* MenuPageViewController + CollectionView.swift */; };
 		D44157142865B09B0075FBB7 /* MenuPageViewController + SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D441570F2865B09B0075FBB7 /* MenuPageViewController + SearchBar.swift */; };
 		D454ABFE2865B4D200147F0E /* ManagedHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454ABF92865B4D200147F0E /* ManagedHistory+CoreDataClass.swift */; };
-		D454ABFF2865B4D200147F0E /* ManagedFavorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454ABFA2865B4D200147F0E /* ManagedFavorite+CoreDataClass.swift */; };
-		D454AC002865B4D200147F0E /* ManagedFavorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454ABFB2865B4D200147F0E /* ManagedFavorite+CoreDataProperties.swift */; };
 		D454AC012865B4D200147F0E /* ManagedHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454ABFC2865B4D200147F0E /* ManagedHistory+CoreDataProperties.swift */; };
 		D454AC022865B4D200147F0E /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454ABFD2865B4D200147F0E /* CoreDataHelper.swift */; };
 		D454AC042865B4E200147F0E /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC032865B4E200147F0E /* ViewExtension.swift */; };
@@ -53,9 +51,14 @@
 		D454AC0F2865BCCE00147F0E /* StaticFavoriteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC0C2865BCCE00147F0E /* StaticFavoriteDataStore.swift */; };
 		D454AC142865BD0300147F0E /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC122865BD0300147F0E /* MenuManager.swift */; };
 		D454AC152865BD0300147F0E /* MenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC132865BD0300147F0E /* MenuRepository.swift */; };
-		D454AC1A2865BD1D00147F0E /* StaticFavoriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC182865BD1D00147F0E /* StaticFavoriteRepository.swift */; };
-		D454AC1B2865BD1D00147F0E /* StaticHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC192865BD1D00147F0E /* StaticHistoryRepository.swift */; };
+		D454AC1A2865BD1D00147F0E /* StaticFavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC182865BD1D00147F0E /* StaticFavoriteManager.swift */; };
+		D454AC1B2865BD1D00147F0E /* StaticHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC192865BD1D00147F0E /* StaticHistoryManager.swift */; };
 		D454AC1D2865BE2400147F0E /* CehatFavoriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC1C2865BE2400147F0E /* CehatFavoriteTests.swift */; };
+		D454AC1F2866EF2600147F0E /* TodayDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC1E2866EF2600147F0E /* TodayDate.swift */; };
+		D454AC222867157A00147F0E /* CoreDataFavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC212867157A00147F0E /* CoreDataFavoriteManager.swift */; };
+		D454AC2528671A5F00147F0E /* ManagedFavorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC2328671A5F00147F0E /* ManagedFavorite+CoreDataClass.swift */; };
+		D454AC2628671A5F00147F0E /* ManagedFavorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC2428671A5F00147F0E /* ManagedFavorite+CoreDataProperties.swift */; };
+		D454AC28286727FA00147F0E /* CoreDataHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC27286727FA00147F0E /* CoreDataHistoryManager.swift */; };
 		D4C83B502863137100376B96 /* DetailMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C83B4F2863137100376B96 /* DetailMenu.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -111,8 +114,6 @@
 		D441570E2865B09B0075FBB7 /* MenuPageViewController + CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuPageViewController + CollectionView.swift"; sourceTree = "<group>"; };
 		D441570F2865B09B0075FBB7 /* MenuPageViewController + SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuPageViewController + SearchBar.swift"; sourceTree = "<group>"; };
 		D454ABF92865B4D200147F0E /* ManagedHistory+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ManagedHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D454ABFA2865B4D200147F0E /* ManagedFavorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ManagedFavorite+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D454ABFB2865B4D200147F0E /* ManagedFavorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ManagedFavorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D454ABFC2865B4D200147F0E /* ManagedHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ManagedHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D454ABFD2865B4D200147F0E /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		D454AC032865B4E200147F0E /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -121,9 +122,14 @@
 		D454AC0C2865BCCE00147F0E /* StaticFavoriteDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaticFavoriteDataStore.swift; path = DataStore/StaticFavoriteDataStore.swift; sourceTree = "<group>"; };
 		D454AC122865BD0300147F0E /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuManager.swift; path = Repository/MenuManager.swift; sourceTree = "<group>"; };
 		D454AC132865BD0300147F0E /* MenuRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuRepository.swift; path = Repository/MenuRepository.swift; sourceTree = "<group>"; };
-		D454AC182865BD1D00147F0E /* StaticFavoriteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaticFavoriteRepository.swift; path = Repository/Static/StaticFavoriteRepository.swift; sourceTree = "<group>"; };
-		D454AC192865BD1D00147F0E /* StaticHistoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaticHistoryRepository.swift; path = Repository/Static/StaticHistoryRepository.swift; sourceTree = "<group>"; };
+		D454AC182865BD1D00147F0E /* StaticFavoriteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaticFavoriteManager.swift; path = Repository/Static/StaticFavoriteManager.swift; sourceTree = "<group>"; };
+		D454AC192865BD1D00147F0E /* StaticHistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaticHistoryManager.swift; path = Repository/Static/StaticHistoryManager.swift; sourceTree = "<group>"; };
 		D454AC1C2865BE2400147F0E /* CehatFavoriteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CehatFavoriteTests.swift; sourceTree = "<group>"; };
+		D454AC1E2866EF2600147F0E /* TodayDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayDate.swift; sourceTree = "<group>"; };
+		D454AC212867157A00147F0E /* CoreDataFavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFavoriteManager.swift; sourceTree = "<group>"; };
+		D454AC2328671A5F00147F0E /* ManagedFavorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedFavorite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D454AC2428671A5F00147F0E /* ManagedFavorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedFavorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D454AC27286727FA00147F0E /* CoreDataHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHistoryManager.swift; sourceTree = "<group>"; };
 		D4C83B4F2863137100376B96 /* DetailMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailMenu.storyboard; sourceTree = "<group>"; };
 		D4C83B51286313A900376B96 /* DetailMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMenuViewController.swift; sourceTree = "<group>"; };
 		D4C83B53286313FF00376B96 /* NutrientsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutrientsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -234,7 +240,6 @@
 				D40E838228532AEA005C2F17 /* Assets.xcassets */,
 				D40E838428532AEA005C2F17 /* LaunchScreen.storyboard */,
 				D40E838728532AEA005C2F17 /* Info.plist */,
-				D40E837F28532AE9005C2F17 /* Cehat.xcdatamodeld */,
 			);
 			path = Cehat;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 		D42783CD2857254300BC5FE5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D454AC1E2866EF2600147F0E /* TodayDate.swift */,
 				D4C83B5E28636CDE00376B96 /* BulletListHelper.swift */,
 			);
 			path = Helper;
@@ -318,11 +324,8 @@
 		D42783CF2857255500BC5FE5 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				D40E837F28532AE9005C2F17 /* Cehat.xcdatamodeld */,
 				D454ABFD2865B4D200147F0E /* CoreDataHelper.swift */,
-				D454ABFA2865B4D200147F0E /* ManagedFavorite+CoreDataClass.swift */,
-				D454ABFB2865B4D200147F0E /* ManagedFavorite+CoreDataProperties.swift */,
-				D454ABF92865B4D200147F0E /* ManagedHistory+CoreDataClass.swift */,
-				D454ABFC2865B4D200147F0E /* ManagedHistory+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -387,7 +390,8 @@
 		D42783D92857512000BC5FE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D454AC112865BCF100147F0E /* Repository */,
+				D454AC202867056900147F0E /* CoreData */,
+				D454AC112865BCF100147F0E /* Manager */,
 				D454AC082865BCAD00147F0E /* DataStore */,
 				D4C83B5A2863190000376B96 /* Menu.swift */,
 				D4C83B5C2863191E00376B96 /* Nutrients.swift */,
@@ -471,7 +475,7 @@
 			name = DataStore;
 			sourceTree = "<group>";
 		};
-		D454AC112865BCF100147F0E /* Repository */ = {
+		D454AC112865BCF100147F0E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				D454AC172865BD1000147F0E /* Static */,
@@ -479,12 +483,14 @@
 				D454AC122865BD0300147F0E /* MenuManager.swift */,
 				D454AC132865BD0300147F0E /* MenuRepository.swift */,
 			);
-			name = Repository;
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		D454AC162865BD0B00147F0E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				D454AC212867157A00147F0E /* CoreDataFavoriteManager.swift */,
+				D454AC27286727FA00147F0E /* CoreDataHistoryManager.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -492,10 +498,21 @@
 		D454AC172865BD1000147F0E /* Static */ = {
 			isa = PBXGroup;
 			children = (
-				D454AC182865BD1D00147F0E /* StaticFavoriteRepository.swift */,
-				D454AC192865BD1D00147F0E /* StaticHistoryRepository.swift */,
+				D454AC182865BD1D00147F0E /* StaticFavoriteManager.swift */,
+				D454AC192865BD1D00147F0E /* StaticHistoryManager.swift */,
 			);
 			name = Static;
+			sourceTree = "<group>";
+		};
+		D454AC202867056900147F0E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D454AC2328671A5F00147F0E /* ManagedFavorite+CoreDataClass.swift */,
+				D454AC2428671A5F00147F0E /* ManagedFavorite+CoreDataProperties.swift */,
+				D454ABF92865B4D200147F0E /* ManagedHistory+CoreDataClass.swift */,
+				D454ABFC2865B4D200147F0E /* ManagedHistory+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -655,18 +672,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D44156C9286481BB0075FBB7 /* NutritientBarProgressController.swift in Sources */,
-				D454ABFF2865B4D200147F0E /* ManagedFavorite+CoreDataClass.swift in Sources */,
+				D454AC222867157A00147F0E /* CoreDataFavoriteManager.swift in Sources */,
 				D454AC152865BD0300147F0E /* MenuRepository.swift in Sources */,
-				D454AC1A2865BD1D00147F0E /* StaticFavoriteRepository.swift in Sources */,
+				D454AC1A2865BD1D00147F0E /* StaticFavoriteManager.swift in Sources */,
 				D454AC022865B4D200147F0E /* CoreDataHelper.swift in Sources */,
 				D44157112865B09B0075FBB7 /* MenuPageViewCollectionViewCell+ Extension UICollectionViewCell.swift in Sources */,
 				D454AC0E2865BCCE00147F0E /* MenuSeeder.swift in Sources */,
 				D44156CA286481BB0075FBB7 /* BulletListHelper.swift in Sources */,
 				D44156CC286481BB0075FBB7 /* HexColorExtension.swift in Sources */,
 				D454AC0F2865BCCE00147F0E /* StaticFavoriteDataStore.swift in Sources */,
-				D454AC1B2865BD1D00147F0E /* StaticHistoryRepository.swift in Sources */,
+				D454AC1B2865BD1D00147F0E /* StaticHistoryManager.swift in Sources */,
+				D454AC2628671A5F00147F0E /* ManagedFavorite+CoreDataProperties.swift in Sources */,
 				D454ABFE2865B4D200147F0E /* ManagedHistory+CoreDataClass.swift in Sources */,
 				D44156CD286481BB0075FBB7 /* AppDelegate.swift in Sources */,
+				D454AC2528671A5F00147F0E /* ManagedFavorite+CoreDataClass.swift in Sources */,
 				D44156CE286481BB0075FBB7 /* SceneDelegate.swift in Sources */,
 				D44156BC286481AF0075FBB7 /* OnBoardingPage.swift in Sources */,
 				D44157132865B09B0075FBB7 /* MenuPageViewController + CollectionView.swift in Sources */,
@@ -677,14 +696,15 @@
 				D44156BF286481AF0075FBB7 /* Nutrients.swift in Sources */,
 				D454AC142865BD0300147F0E /* MenuManager.swift in Sources */,
 				D44156C0286481AF0075FBB7 /* DetailMenuViewController.swift in Sources */,
-				D454AC002865B4D200147F0E /* ManagedFavorite+CoreDataProperties.swift in Sources */,
 				D44156C1286481AF0075FBB7 /* NutrientsCollectionViewCell.swift in Sources */,
+				D454AC28286727FA00147F0E /* CoreDataHistoryManager.swift in Sources */,
 				D44157102865B09B0075FBB7 /* MenuPageViewController.swift in Sources */,
 				D44156C2286481AF0075FBB7 /* DetailMenuController+UICollectionView.swift in Sources */,
 				D44156C3286481AF0075FBB7 /* NutritionSeeder.swift in Sources */,
 				D44156C4286481AF0075FBB7 /* NutritionStructure.swift in Sources */,
 				D454AC042865B4E200147F0E /* ViewExtension.swift in Sources */,
 				D44156C5286481AF0075FBB7 /* NutritionTableViewCell + Extension UITableViewCell.swift in Sources */,
+				D454AC1F2866EF2600147F0E /* TodayDate.swift in Sources */,
 				D454AC012865B4D200147F0E /* ManagedHistory+CoreDataProperties.swift in Sources */,
 				D454AC0D2865BCCE00147F0E /* StaticHistoryDataStore.swift in Sources */,
 				D44156C6286481AF0075FBB7 /* NutritionViewController + TableView.swift in Sources */,

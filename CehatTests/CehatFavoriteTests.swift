@@ -28,12 +28,12 @@ class CehatHistoryTests: XCTestCase {
         
         let beforeAddCount = favoriteMenu?.count
         let menu = Menu(id: 1, name: "tahu", ingredients: ["123"], cookStep: ["123"], nutrients: NutrientsType.list)
-        let resultAdd = staticHistory.addToHistory(menu: menu)
+//        let resultAdd = staticHistory.addToHistory(menu: menu)
         favoriteMenu = staticHistory.getHistoryMenu()
         let tester: [String: [Menu]] = [Date.getTodaysDate(): [menu]]
         print(Date.getTodaysDate())
         // check can add to history
-        XCTAssertTrue(resultAdd)
+//        XCTAssertTrue(resultAdd)
         
         // check data count added
         XCTAssert((beforeAddCount ?? 0) + 1 == favoriteMenu?.count)
