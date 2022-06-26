@@ -32,7 +32,8 @@ class MenuPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupArray(menus: seeder.getAllMenu())
+        arrayMenu = seeder.getAllMenu()
+        setupArray(menus: arrayMenu)
         
         //regis xib
         let nibCell = UINib(nibName: "MenuPageCollectionViewCell", bundle: nil)
@@ -69,7 +70,6 @@ class MenuPageViewController: UIViewController {
     
     
     @IBAction func didSegmentedTap(_ sender: UISegmentedControl) {
-        
         if sender.selectedSegmentIndex == 0 {
             deleteArray()
             arrayMenu = seeder.getAllMenu()

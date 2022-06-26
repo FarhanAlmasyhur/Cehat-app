@@ -15,6 +15,7 @@ class DetailMenuViewController: UIViewController {
     @IBOutlet weak var caraMasak: UILabel!
     @IBOutlet weak var nutritionCountCell: UICollectionView!
     @IBOutlet weak var menuImage: UIImageView!
+    @IBOutlet weak var menuName: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
     let menuSeeder: MenuSeeder = MenuSeeder()
@@ -33,7 +34,7 @@ class DetailMenuViewController: UIViewController {
     //MARK: - Setup View
     func setupView(){
         guard let menu = menu else { return }
-
+        menuName.text = menu.name
         menuDetail.layer.cornerRadius = 20
         listBahan.attributedText = BulletListHelper.createBulletedList(fromStringArray: menu.ingredients)
         caraMasak.attributedText = BulletListHelper.createBulletedList(fromStringArray: menu.cookStep, isNumbered: true)
