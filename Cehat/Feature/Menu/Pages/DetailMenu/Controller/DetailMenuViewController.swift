@@ -32,11 +32,13 @@ class DetailMenuViewController: UIViewController {
     
     //MARK: - Setup View
     func setupView(){
+        guard let menu = menu else { return }
+
         menuDetail.layer.cornerRadius = 20
-        listBahan.attributedText = BulletListHelper.createBulletedList(fromStringArray: menu?.ingredients ?? ["Label"])
-        caraMasak.attributedText = BulletListHelper.createBulletedList(fromStringArray: menu?.cookStep ?? ["Label"], isNumbered: true)
+        listBahan.attributedText = BulletListHelper.createBulletedList(fromStringArray: menu.ingredients)
+        caraMasak.attributedText = BulletListHelper.createBulletedList(fromStringArray: menu.cookStep, isNumbered: true)
         caraMasak.textAlignment = .justified
-        menuImage.image = #imageLiteral(resourceName: "Salad")
+        menuImage.image = UIImage(named: menu.image)
         menuImage.circleView()
         checkFavorited()
     }

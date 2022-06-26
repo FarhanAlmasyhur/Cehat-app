@@ -14,7 +14,7 @@ class MenuSeeder
     
     let menu1: Menu = {
         let name: String = "Ayam Goreng"
-//        let image: String = "ayamgoreng"
+        let image: String = "1_Ayam Goreng"
         let ingredients = [
             "50 gram daging ayam"
             ,"1/2 siung bawang putih, tumbuk sedikit kasar"
@@ -45,12 +45,12 @@ class MenuSeeder
         nutrients[.zinc] = 2.13
         nutrients[.iron] = 1.3
         
-        return Menu(id: 1, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
+        return Menu(id: 1, image: image, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
     }()
     
     let menu2: Menu = {
         let name: String = "Ayam Teriyaki"
-        
+        let image: String = "2_Ayam Teriyaki"
         let ingredients = [
             "50 gram Dada ayam fillet"
             ,"1/4 Buah bawang bombay"
@@ -88,12 +88,12 @@ class MenuSeeder
         nutrients[.zinc] = 2.13
         nutrients[.iron] = 1.3
         
-        return Menu(id: 2, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
+        return Menu(id: 2,image: image, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
     }()
     
     let menu3: Menu = {
         let name: String = "Sup Bihun"
-        
+        let image: String = "3_Sup Bihun"
         let ingredients = [
             "Bihun beras organik, secukupnya"
             ,"Sayap ayam 1 pcs potong-potong, direbus untuk rasa kaldu"
@@ -126,12 +126,12 @@ class MenuSeeder
         nutrients[.zinc] = 0
         nutrients[.iron] = 0
         
-        return Menu(id: 3, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
+        return Menu(id: 3,image: image, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
     }()
     
     let menu4: Menu = {
         let name: String = "Tumis Kangkung"
-        
+        let image: String = "4_Tumis Kangkung"
         let ingredients = [
             "23 gram saus tiram"
             ,"3 sendok makan minyak goreng"
@@ -162,46 +162,12 @@ class MenuSeeder
         nutrients[.zinc] = 0
         nutrients[.iron] = 3
         
-        return Menu(id: 4, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
-    }()
-    
-    let menu5: Menu = {
-        let name: String = "Nasi Goreng"
-        
-        let ingredients = [
-            "46 gram kecambah"
-            ,"½ sendok makan minyak wijen"
-            ,"½ sendok makan saus tiram"
-            ,"31 gram kubis"
-            ,"50 gram wortel"
-            ,"30 gram nasi putih"
-        ]
-        
-        let cookstep = [
-            "Tumis wortel selama 1 menit, lalu masukkan kubis kemudian tumis kembali"
-            ,"Masukkan nasi, tumis hingga rata lalu masukkan kecambah"
-            ,"Tambahkan saus tiram dan minyak wijen"
-        ]
-        
-        var nutrients: Nutrients = NutrientsType.list
-        nutrients[.calories] = 333
-        nutrients[.carbohydrate] = 41.7
-        nutrients[.protein] = 12.47
-        nutrients[.fat] = 12.34
-        nutrients[.vitaminA] = 0
-        nutrients[.vitaminB] = 0
-        nutrients[.vitaminC] = 0
-        nutrients[.vitaminD] = 3.2
-        nutrients[.vitaminE] = 1.31
-        nutrients[.zinc] = 4.8
-        nutrients[.iron] = 0.2
-        
-        return Menu(id: 5, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
+        return Menu(id: 4, image: image, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
     }()
     
     let menu6: Menu = {
         let name: String = "Telur Dadar"
-        
+        let image: String = "6_Telur Dadar"
         let ingredients = [
             "28 gram telur"
             ,"Bubuk bawang putih (secukupnya)"
@@ -231,12 +197,12 @@ class MenuSeeder
         nutrients[.zinc] = 0
         nutrients[.iron] = 0
         
-        return Menu(id: 6, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
+        return Menu(id: 6,image: image, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
     }()
     
     let menu7: Menu = {
         let name: String = "Salad"
-        
+        let image: String = "7_Salad"
         let ingredients = [
             "minyak goreng"
             ,"1 butir telur ayam segar"
@@ -277,12 +243,12 @@ class MenuSeeder
         nutrients[.zinc] = 0
         nutrients[.iron] = 0
         
-        return Menu(id: 7, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
+        return Menu(id: 7,image: image, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
     }()
     
     let menu8: Menu = {
         let name: String = "Stim Ikan"
-        
+        let image: String = "8_Stim Ikan"
         let ingredients = [
             "28 gram ikan"
             ,"1 siung bawang putih, geprek"
@@ -323,12 +289,12 @@ class MenuSeeder
         nutrients[.zinc] = 0
         nutrients[.iron] = 0
         
-        return Menu(id: 8, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
+        return Menu(id: 8, image: image, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
     }()
     
     let menu9: Menu = {
         let name: String = "Sup Ayam"
-        
+        let image: String = "9_Sup Ayam"
         let ingredients = [
             "1 sendok makan minyak kelapa"
             ,"1 buah bawang bombay yang sudah diiris"
@@ -361,12 +327,12 @@ class MenuSeeder
         nutrients[.zinc] = 2.13
         nutrients[.iron] = 1.3
         
-        return Menu(id: 9, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
+        return Menu(id: 9,image: image, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
     }()
     
     let menu10: Menu = {
         let name: String = "Kacang Panjang"
-        
+        let image: String = "10_Tumis Kacang Panjang"
         let ingredients = [
             "1 ikat kacang panjang"
             ,"2 siung bawang putih"
@@ -399,7 +365,7 @@ class MenuSeeder
         nutrients[.zinc] = 0.24
         nutrients[.iron] = 1.03
         
-        return Menu(id: 10, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
+        return Menu(id: 10,image: image, name: name, ingredients: ingredients, cookStep: cookstep, nutrients: nutrients)
     }()
     
     
@@ -408,7 +374,7 @@ class MenuSeeder
         allMenu.append(menu2)
         allMenu.append(menu3)
         allMenu.append(menu4)
-        allMenu.append(menu5)
+//        allMenu.append(menu5)
         allMenu.append(menu6)
         allMenu.append(menu7)
         allMenu.append(menu8)

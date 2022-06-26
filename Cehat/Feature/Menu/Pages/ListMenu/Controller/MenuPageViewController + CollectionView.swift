@@ -26,9 +26,10 @@ extension MenuPageViewController: UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Nutrition", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "NutritionViewController") as! NutritionViewController
+        let storyboard = UIStoryboard(name: "DetailMenu", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailMenuViewController") as! DetailMenuViewController
         collectionView.deselectItem(at: indexPath, animated: true)
+        vc.menu = arrayMenu[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
