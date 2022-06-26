@@ -15,11 +15,11 @@ extension DetailMenuViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NutrientsCollectionViewCell", for: indexPath) as! NutrientsCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NutritionCountCell", for: indexPath) as! NutrientsCountCollectionViewCell
         
         
         let type = NutrientsType.allCases.first(where: { $0.rawValue == indexPath.row })!
-        let value = menu?.nutrients?[type] ?? 0
+        let value = menu?.nutrients[type] ?? 0
         
         cell.setupCell(with: NutrientsData(nutritionType: type, nutritionValue: value))
         
@@ -30,10 +30,10 @@ extension DetailMenuViewController: UICollectionViewDataSource {
 
 extension DetailMenuViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 5
     }
 }
