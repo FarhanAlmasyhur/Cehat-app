@@ -18,10 +18,10 @@ extension MenuPageViewController: UICollectionViewDelegate, UICollectionViewData
         let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MenuPageCollectionViewCell
         cell.photoMenu.image = UIImage(named: menuImages[indexPath.row])
         cell.nameMenu.text = filteredMenuNames[indexPath.row]
-        cell.totalFat.text = viewTotalFat[indexPath.row]
-        cell.totalCarbo.text = viewTotalCarbo[indexPath.row]
-        cell.totalCalory.text = viewTotalCalory[indexPath.row]
-        cell.totalProtein.text = viewTotalProtein[indexPath.row]
+        cell.totalFat.text = String(viewTotalFat[indexPath.row])
+        cell.totalCarbo.text = String(viewTotalCarbo[indexPath.row])
+        cell.totalCalory.text = String(viewTotalCalory[indexPath.row])
+        cell.totalProtein.text = String(viewTotalProtein[indexPath.row])
         cell.shadowDecorate()
         return cell
     }

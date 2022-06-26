@@ -16,3 +16,4 @@ struct Menu: Equatable {
     var cookStep: [String]
     var nutrients: Nutrients
 }
+
