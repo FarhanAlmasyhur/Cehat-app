@@ -19,7 +19,7 @@ class StaticHistoryManager: MenuHistoryRepository
     
     func addToHistory(idMenu: Int) -> Bool {
         guard let menuAdded = menuSeeder.getMenuById(idMenu: idMenu) else { return false }
-        historyMenus[todaysDate]?.append(menuAdded)
+        historyMenus[todaysDate, default: []].append(menuAdded)
         return true
     }
     

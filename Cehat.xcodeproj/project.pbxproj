@@ -22,7 +22,6 @@
 		D44156BE286481AF0075FBB7 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C83B5A2863190000376B96 /* Menu.swift */; };
 		D44156BF286481AF0075FBB7 /* Nutrients.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C83B5C2863191E00376B96 /* Nutrients.swift */; };
 		D44156C0286481AF0075FBB7 /* DetailMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C83B51286313A900376B96 /* DetailMenuViewController.swift */; };
-		D44156C1286481AF0075FBB7 /* NutrientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C83B53286313FF00376B96 /* NutrientsCollectionViewCell.swift */; };
 		D44156C2286481AF0075FBB7 /* DetailMenuController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C83B6028636D1000376B96 /* DetailMenuController+UICollectionView.swift */; };
 		D44156C3286481AF0075FBB7 /* NutritionSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44156AF28647EDE0075FBB7 /* NutritionSeeder.swift */; };
 		D44156C4286481AF0075FBB7 /* NutritionStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44156B028647EDE0075FBB7 /* NutritionStructure.swift */; };
@@ -46,10 +45,7 @@
 		D454AC012865B4D200147F0E /* ManagedHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454ABFC2865B4D200147F0E /* ManagedHistory+CoreDataProperties.swift */; };
 		D454AC022865B4D200147F0E /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454ABFD2865B4D200147F0E /* CoreDataHelper.swift */; };
 		D454AC042865B4E200147F0E /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC032865B4E200147F0E /* ViewExtension.swift */; };
-		D454AC0D2865BCCE00147F0E /* StaticHistoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC0A2865BCCE00147F0E /* StaticHistoryDataStore.swift */; };
 		D454AC0E2865BCCE00147F0E /* MenuSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC0B2865BCCE00147F0E /* MenuSeeder.swift */; };
-		D454AC0F2865BCCE00147F0E /* StaticFavoriteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC0C2865BCCE00147F0E /* StaticFavoriteDataStore.swift */; };
-		D454AC142865BD0300147F0E /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC122865BD0300147F0E /* MenuManager.swift */; };
 		D454AC152865BD0300147F0E /* MenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC132865BD0300147F0E /* MenuRepository.swift */; };
 		D454AC1A2865BD1D00147F0E /* StaticFavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC182865BD1D00147F0E /* StaticFavoriteManager.swift */; };
 		D454AC1B2865BD1D00147F0E /* StaticHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC192865BD1D00147F0E /* StaticHistoryManager.swift */; };
@@ -59,6 +55,9 @@
 		D454AC2528671A5F00147F0E /* ManagedFavorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC2328671A5F00147F0E /* ManagedFavorite+CoreDataClass.swift */; };
 		D454AC2628671A5F00147F0E /* ManagedFavorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC2428671A5F00147F0E /* ManagedFavorite+CoreDataProperties.swift */; };
 		D454AC28286727FA00147F0E /* CoreDataHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454AC27286727FA00147F0E /* CoreDataHistoryManager.swift */; };
+		D46DD3C3286855EA004DF3D6 /* NutrientsCountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DD3C1286855EA004DF3D6 /* NutrientsCountCollectionViewCell.swift */; };
+		D46DD3C4286855EA004DF3D6 /* NutrientsCountCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46DD3C2286855EA004DF3D6 /* NutrientsCountCollectionViewCell.xib */; };
+		D46DD3C528687C66004DF3D6 /* Cehat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D40E837F28532AE9005C2F17 /* Cehat.xcdatamodeld */; };
 		D4C83B502863137100376B96 /* DetailMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C83B4F2863137100376B96 /* DetailMenu.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -117,10 +116,7 @@
 		D454ABFC2865B4D200147F0E /* ManagedHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ManagedHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D454ABFD2865B4D200147F0E /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		D454AC032865B4E200147F0E /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		D454AC0A2865BCCE00147F0E /* StaticHistoryDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaticHistoryDataStore.swift; path = DataStore/StaticHistoryDataStore.swift; sourceTree = "<group>"; };
 		D454AC0B2865BCCE00147F0E /* MenuSeeder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuSeeder.swift; path = DataStore/MenuSeeder.swift; sourceTree = "<group>"; };
-		D454AC0C2865BCCE00147F0E /* StaticFavoriteDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaticFavoriteDataStore.swift; path = DataStore/StaticFavoriteDataStore.swift; sourceTree = "<group>"; };
-		D454AC122865BD0300147F0E /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuManager.swift; path = Repository/MenuManager.swift; sourceTree = "<group>"; };
 		D454AC132865BD0300147F0E /* MenuRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuRepository.swift; path = Repository/MenuRepository.swift; sourceTree = "<group>"; };
 		D454AC182865BD1D00147F0E /* StaticFavoriteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaticFavoriteManager.swift; path = Repository/Static/StaticFavoriteManager.swift; sourceTree = "<group>"; };
 		D454AC192865BD1D00147F0E /* StaticHistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaticHistoryManager.swift; path = Repository/Static/StaticHistoryManager.swift; sourceTree = "<group>"; };
@@ -130,9 +126,10 @@
 		D454AC2328671A5F00147F0E /* ManagedFavorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedFavorite+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D454AC2428671A5F00147F0E /* ManagedFavorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedFavorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D454AC27286727FA00147F0E /* CoreDataHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHistoryManager.swift; sourceTree = "<group>"; };
+		D46DD3C1286855EA004DF3D6 /* NutrientsCountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsCountCollectionViewCell.swift; sourceTree = "<group>"; };
+		D46DD3C2286855EA004DF3D6 /* NutrientsCountCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutrientsCountCollectionViewCell.xib; sourceTree = "<group>"; };
 		D4C83B4F2863137100376B96 /* DetailMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailMenu.storyboard; sourceTree = "<group>"; };
 		D4C83B51286313A900376B96 /* DetailMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMenuViewController.swift; sourceTree = "<group>"; };
-		D4C83B53286313FF00376B96 /* NutrientsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutrientsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D4C83B5A2863190000376B96 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		D4C83B5C2863191E00376B96 /* Nutrients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrients.swift; sourceTree = "<group>"; };
 		D4C83B5E28636CDE00376B96 /* BulletListHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletListHelper.swift; sourceTree = "<group>"; };
@@ -442,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C83B4F2863137100376B96 /* DetailMenu.storyboard */,
+				D46DD3C2286855EA004DF3D6 /* NutrientsCountCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,8 +448,8 @@
 			isa = PBXGroup;
 			children = (
 				D4C83B51286313A900376B96 /* DetailMenuViewController.swift */,
-				D4C83B53286313FF00376B96 /* NutrientsCollectionViewCell.swift */,
 				D4C83B6028636D1000376B96 /* DetailMenuController+UICollectionView.swift */,
+				D46DD3C1286855EA004DF3D6 /* NutrientsCountCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -469,8 +467,6 @@
 			isa = PBXGroup;
 			children = (
 				D454AC0B2865BCCE00147F0E /* MenuSeeder.swift */,
-				D454AC0C2865BCCE00147F0E /* StaticFavoriteDataStore.swift */,
-				D454AC0A2865BCCE00147F0E /* StaticHistoryDataStore.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -480,7 +476,6 @@
 			children = (
 				D454AC172865BD1000147F0E /* Static */,
 				D454AC162865BD0B00147F0E /* CoreData */,
-				D454AC122865BD0300147F0E /* MenuManager.swift */,
 				D454AC132865BD0300147F0E /* MenuRepository.swift */,
 			);
 			name = Manager;
@@ -621,6 +616,7 @@
 			files = (
 				D441570A2865B0900075FBB7 /* MenuPageCollectionViewCell.xib in Resources */,
 				526EED862857A77C00C92E13 /* OnBoardingPage.storyboard in Resources */,
+				D46DD3C4286855EA004DF3D6 /* NutrientsCountCollectionViewCell.xib in Resources */,
 				D40E838628532AEA005C2F17 /* LaunchScreen.storyboard in Resources */,
 				D4C83B502863137100376B96 /* DetailMenu.storyboard in Resources */,
 				D44157092865B0900075FBB7 /* MenuPage.storyboard in Resources */,
@@ -680,7 +676,6 @@
 				D454AC0E2865BCCE00147F0E /* MenuSeeder.swift in Sources */,
 				D44156CA286481BB0075FBB7 /* BulletListHelper.swift in Sources */,
 				D44156CC286481BB0075FBB7 /* HexColorExtension.swift in Sources */,
-				D454AC0F2865BCCE00147F0E /* StaticFavoriteDataStore.swift in Sources */,
 				D454AC1B2865BD1D00147F0E /* StaticHistoryManager.swift in Sources */,
 				D454AC2628671A5F00147F0E /* ManagedFavorite+CoreDataProperties.swift in Sources */,
 				D454ABFE2865B4D200147F0E /* ManagedHistory+CoreDataClass.swift in Sources */,
@@ -690,23 +685,22 @@
 				D44156BC286481AF0075FBB7 /* OnBoardingPage.swift in Sources */,
 				D44157132865B09B0075FBB7 /* MenuPageViewController + CollectionView.swift in Sources */,
 				D44157122865B09B0075FBB7 /* MenuPageCollectionViewCell.swift in Sources */,
+				D46DD3C528687C66004DF3D6 /* Cehat.xcdatamodeld in Sources */,
 				D44157142865B09B0075FBB7 /* MenuPageViewController + SearchBar.swift in Sources */,
 				D44156BD286481AF0075FBB7 /* OnBoardingPage + CustomizeNextButton.swift in Sources */,
 				D44156BE286481AF0075FBB7 /* Menu.swift in Sources */,
 				D44156BF286481AF0075FBB7 /* Nutrients.swift in Sources */,
-				D454AC142865BD0300147F0E /* MenuManager.swift in Sources */,
 				D44156C0286481AF0075FBB7 /* DetailMenuViewController.swift in Sources */,
-				D44156C1286481AF0075FBB7 /* NutrientsCollectionViewCell.swift in Sources */,
 				D454AC28286727FA00147F0E /* CoreDataHistoryManager.swift in Sources */,
 				D44157102865B09B0075FBB7 /* MenuPageViewController.swift in Sources */,
 				D44156C2286481AF0075FBB7 /* DetailMenuController+UICollectionView.swift in Sources */,
+				D46DD3C3286855EA004DF3D6 /* NutrientsCountCollectionViewCell.swift in Sources */,
 				D44156C3286481AF0075FBB7 /* NutritionSeeder.swift in Sources */,
 				D44156C4286481AF0075FBB7 /* NutritionStructure.swift in Sources */,
 				D454AC042865B4E200147F0E /* ViewExtension.swift in Sources */,
 				D44156C5286481AF0075FBB7 /* NutritionTableViewCell + Extension UITableViewCell.swift in Sources */,
 				D454AC1F2866EF2600147F0E /* TodayDate.swift in Sources */,
 				D454AC012865B4D200147F0E /* ManagedHistory+CoreDataProperties.swift in Sources */,
-				D454AC0D2865BCCE00147F0E /* StaticHistoryDataStore.swift in Sources */,
 				D44156C6286481AF0075FBB7 /* NutritionViewController + TableView.swift in Sources */,
 				D44156C7286481AF0075FBB7 /* NutritionViewController.swift in Sources */,
 				D44156C8286481AF0075FBB7 /* NutritionTableViewCell.swift in Sources */,

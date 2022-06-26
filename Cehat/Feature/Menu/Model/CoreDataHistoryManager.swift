@@ -31,6 +31,7 @@ class CoreDataHistoryManager: MenuHistoryRepository {
     func addToHistory(idMenu: Int) -> Bool {
         let context = coreDataHelper.getBackgroundContext()
         let history: ManagedHistory!
+        var historyArr: [Int] = []
         
         // Get todays Menu
         let fetchRequest = ManagedHistory.fetchRequest()
@@ -43,8 +44,10 @@ class CoreDataHistoryManager: MenuHistoryRepository {
             history.date = Date.getTodaysDate()
         } else {
             history = results?.first
+            historyArr = history.idMenu ?? []
         }
-        history.idMenu?.append(idMenu)
+        historyArr.append(idMenu)
+        history.idMenu = historyArr
         coreDataHelper.saveContext(saveContext: context)
         return true
     }

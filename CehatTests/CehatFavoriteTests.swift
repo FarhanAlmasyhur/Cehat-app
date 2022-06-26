@@ -10,38 +10,39 @@ import XCTest
 
 class CehatHistoryTests: XCTestCase {
     
-    let staticHistory = StaticHistoryRepository()
-    var favoriteMenu: [String: [Menu]]?
+    let historyManager: MenuHistoryRepository = CoreDataHistoryManager()
+    var historyMenu: [String: [Menu]]?
+    let menuSeeder = MenuSeeder()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        favoriteMenu = staticHistory.getHistoryMenu()
+        historyMenu = historyManager.getHistoryMenu()
     }
     
     override func tearDown() async throws {
-        favoriteMenu?.removeAll()
+        historyMenu?.removeAll()
     }
 
     
 
     func testAddToFavorite() throws {
         
-        let beforeAddCount = favoriteMenu?.count
-        let menu = Menu(id: 1, name: "tahu", ingredients: ["123"], cookStep: ["123"], nutrients: NutrientsType.list)
-//        let resultAdd = staticHistory.addToHistory(menu: menu)
-        favoriteMenu = staticHistory.getHistoryMenu()
+        let beforeAddCount = historyMenu?.count
+        let menu = menuSeeder.menu1
+        historyMenu = historyManager.getHistoryMenu()
         let tester: [String: [Menu]] = [Date.getTodaysDate(): [menu]]
-        print(Date.getTodaysDate())
+        
+        let menuAdded = historyManager.addToHistory(idMenu: menu.id)
+        
         // check can add to history
-//        XCTAssertTrue(resultAdd)
+        XCTAssertTrue(menuAdded)
         
         // check data count added
-        XCTAssert((beforeAddCount ?? 0) + 1 == favoriteMenu?.count)
+        XCTAssert((beforeAddCount ?? 0) + 1 == historyManager.getHistoryMenu()?.count)
         
         // check data is the same
-        XCTAssert((favoriteMenu![Date.getTodaysDate()]) == tester[Date.getTodaysDate()])
+        XCTAssert(tester == historyManager.getHistoryMenu())
 
-        
     }
 
 //    func testPerformanceExample() throws {

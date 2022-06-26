@@ -30,6 +30,11 @@ class CoreDataFavoriteManager: MenuFavoriteRepository{
         
     }
     
+    func checkFavorited(idMenu: Int) -> Bool {
+        guard let arrFavorite = getFavoriteMenu() else { return false }
+        return arrFavorite.contains(where: {$0.id == idMenu})
+    }
+    
     func addToFavorite(idMenu: Int) -> Bool {
         let context = coreDataHelper.getBackgroundContext()
         let favorite = ManagedFavorite(context: context)

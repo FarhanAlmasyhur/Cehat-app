@@ -11,6 +11,7 @@ import Foundation
 
 protocol MenuFavoriteRepository {
     func getFavoriteMenu() -> [Menu]?
+    func checkFavorited(idMenu: Int) -> Bool
     func addToFavorite(idMenu: Int) -> Bool
     func deleteFromFavorite(idMenu: Int) -> Bool
     func deleteAllFavorite() -> Bool

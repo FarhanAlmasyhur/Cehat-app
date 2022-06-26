@@ -15,7 +15,8 @@ class CoreDataHelper {
     let viewContext: NSManagedObjectContext!
     
     init(){
-        container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        container = appDelegate?.persistentContainer
         viewContext = container.viewContext
     }
     

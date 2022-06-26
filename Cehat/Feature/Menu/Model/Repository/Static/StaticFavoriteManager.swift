@@ -17,6 +17,11 @@ class StaticFavoriteManager: MenuFavoriteRepository
         return favoriteMenus
     }
     
+    func checkFavorited(idMenu: Int) -> Bool {
+        favoriteMenus = getFavoriteMenu() ?? []
+        return favoriteMenus.contains(where: {$0.id == idMenu})
+    }
+    
     func addToFavorite(idMenu: Int) -> Bool {
         guard let favoritedMenu = menuSeeder.getMenuById(idMenu: idMenu) else {return false}
         favoriteMenus.append(favoritedMenu)

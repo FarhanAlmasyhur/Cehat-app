@@ -13,31 +13,78 @@ class DetailMenuViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var listBahan: UILabel!
     @IBOutlet weak var caraMasak: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nutritionCountCell: UICollectionView!
+    @IBOutlet weak var menuImage: UIImageView!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     let menuSeeder: MenuSeeder = MenuSeeder()
     var menu: Menu?
+    let menuHistoryManager: MenuHistoryRepository = CoreDataHistoryManager()
+    let menuFavoriteManager: MenuFavoriteRepository = CoreDataFavoriteManager()
+    var favoritedMenu: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menu = menuSeeder.menu2
-        // Do any additional setup after loading the view.
         setupView()
         setupCollectionView()
     }
     
+    
+    //MARK: - Setup View
     func setupView(){
         menuDetail.layer.cornerRadius = 20
         listBahan.attributedText = BulletListHelper.createBulletedList(fromStringArray: menu?.ingredients ?? ["Label"])
         caraMasak.attributedText = BulletListHelper.createBulletedList(fromStringArray: menu?.cookStep ?? ["Label"], isNumbered: true)
         caraMasak.textAlignment = .justified
+        menuImage.image = #imageLiteral(resourceName: "Salad")
+        menuImage.circleView()
+        checkFavorited()
     }
     
+    
     func setupCollectionView(){
-        collectionView.dataSource = self
-        
+        let nibCell = UINib(nibName: "NutrientsCountCollectionViewCell", bundle: nil)
+        nutritionCountCell.register(nibCell, forCellWithReuseIdentifier: "NutritionCountCell")
+        nutritionCountCell.dataSource = self
     }
+    
+    func checkFavorited(){
+        favoritedMenu = menuFavoriteManager.checkFavorited(idMenu: menu?.id ?? -1)
+        DispatchQueue.main.async {
+            if self.favoritedMenu {
+                self.favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            } else {
+                self.favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            }
+        }
+    }
+    
+    // MARK: - Action
+    @IBAction func addMenu(_ sender: Any) {
+        let alert = UIAlertController(title: "Perhatian", message: "Pastikan takaran bahan yang digunakan sesuai karena akan berpengaruh pada jumlah kalorinya", preferredStyle: .alert)
+        let okeButtonAction = UIAlertAction(title: "Oke", style: UIAlertAction.Style.default, handler: {action in
+            let _ = self.menuHistoryManager.addToHistory(idMenu: self.menu?.id ?? -1)
+        })
+        
+        // change title color
+        okeButtonAction.setValue(UIColor.myDarkGreen, forKey: "titleTextColor")
+        
+        // add the action for Alert
+        alert.addAction(okeButtonAction)
 
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func favoriteButton(_ sender: Any) {
+        if favoritedMenu {
+            menuFavoriteManager.deleteFromFavorite(idMenu: self.menu?.id ?? -1)
+            checkFavorited()
+        } else {
+            menuFavoriteManager.addToFavorite(idMenu: self.menu?.id ?? -1)
+            checkFavorited()
+        }
+    }
+    
 }
 
 
