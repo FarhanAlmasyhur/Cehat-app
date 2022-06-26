@@ -9,16 +9,14 @@ import UIKit
 
 class MenuPageViewController: UIViewController {
     
-    var menuImages:[String] = ["Stim_Ikan","Tumis_Kangkung","Nasi_Goreng","Salad","Salad","Salad"]
-    var menuNames:[String] = ["Nasi Goreng","Baso Sapi","Indomie Goreng","Indomie Rebus","Indomie Rebus","Indomie Rebus"]
-    var viewTotalCalory:[String] = ["100gr","50gr","40gr","80gr","80gr","80gr"]
-    var viewTotalCarbo:[String] = ["100gr","50gr","40gr","80gr","80gr","80gr"]
-    var viewTotalProtein:[String] = ["100gr","50gr","40gr","80gr","80gr","80gr"]
-    var viewTotalFat:[String] = ["100gr","50gr","40gr","80gr","80gr","80gr"]
-    
-    let seeder: MenuSeeder = MenuSeeder()
     var arrayMenu: [Menu] = []
-    
+    let seeder: MenuSeeder = MenuSeeder()
+    var menuImages:[String] = ["Stim_Ikan","Tumis_Kangkung","Nasi_Goreng","Salad","Salad","Salad"]
+    var menuNames: [String] = []
+    var viewTotalCalory: [Double] = []
+    var viewTotalCarbo: [Double] = []
+    var viewTotalProtein: [Double] = []
+    var viewTotalFat: [Double] = []
     var filteredMenuNames: [String]!
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -57,12 +55,6 @@ class MenuPageViewController: UIViewController {
         super.viewDidLoad()
         setupArray()
         
-        //sarchbar
-        filteredMenuNames = menuNames
-        searchBar.searchTextField.layer.cornerRadius = 20
-        searchBar.searchTextField.layer.masksToBounds = true
-        searchBar.delegate = self
-        
         //regis xib
         let nibCell = UINib(nibName: "MenuPageCollectionViewCell", bundle: nil)
         menuCollectionView.register(nibCell, forCellWithReuseIdentifier: "cell")
@@ -73,6 +65,18 @@ class MenuPageViewController: UIViewController {
     
     
     func setupArray(){
+        
         arrayMenu = seeder.getAllMenu()
+        filteredMenuNames = arrayMenu.map{$0.name}
+        viewTotalCalory = arrayMenu.map{$0.nutrients[.calories]}
+        viewTotalFat = arrayMenu.map{$0.nutrients[.fat]}
+        viewTotalCarbo = arrayMenu.map{$0.nutrients[.carbohydrate]}
+        viewTotalProtein = arrayMenu.map{$0.nutrients[.protein]}
+        
+        //sarchbar
+        searchBar.searchTextField.layer.cornerRadius = 20
+        searchBar.searchTextField.layer.masksToBounds = true
+        searchBar.delegate = self
+        
     }
 }
