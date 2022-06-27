@@ -14,12 +14,12 @@ class NutritionTableViewCell: UITableViewCell {
     @IBOutlet weak var nutritionLabel: UILabel!
     @IBOutlet weak var barProgressPercentage: UILabel!
     @IBOutlet weak var nutritionDescription: UILabel!
-   // @IBOutlet weak var nutrientBarProgress: UIProgressView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var contentsView: UIView!
     @IBOutlet weak var nutrientProgBar2: UIProgressView!
     
-    var ageChild = 2
+    var ageChild =  UserDefaults.standard.integer(forKey: "childAge")
+
     var karboMaks: Double?
     var proteinMaks: Double?
     var lemakMaks: Double?
@@ -32,6 +32,7 @@ class NutritionTableViewCell: UITableViewCell {
     var ironMaks: Double?
     var selectMenu = [80.0,25.0,10.0]
     
+    
     static func nib() -> UINib{
         return UINib(nibName: "NutritionTableViewCell", bundle: nil)
     }
@@ -39,24 +40,7 @@ class NutritionTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-//        shadowDecorate()
-        // add shadow on cell
         backgroundColor = .clear
-        layer.masksToBounds = false
-        layer.shadowOpacity = 0.3
-        layer.shadowRadius = 20
-        layer.shadowOffset = CGSize(width: 0, height: 3)
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 8, height: 8)).cgPath
-        layer.shouldRasterize = true
-        layer.rasterizationScale = UIScreen.main.scale
-
-        // add corner radius on `contentView`
-        contentsView.backgroundColor = .white
-        contentsView.layer.cornerRadius = 8
-        
-        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -65,18 +49,51 @@ class NutritionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+            //viewContainer is the parent of viewContents
+            //viewContents contains all the UI which you want to show actually.
+            
+            self.contentsView.layer.cornerRadius = 20
+            self.contentsView.layer.masksToBounds = true
+            
+            let bezierPath = UIBezierPath.init(roundedRect: self.contentsView.bounds, cornerRadius: 20)
+            self.contentsView.layer.shadowPath = bezierPath.cgPath
+            self.containerView.layer.masksToBounds = false
+            self.containerView.layer.shadowColor = UIColor.black.cgColor
+            self.containerView.layer.shadowRadius = 3.0
+            self.containerView.layer.shadowOffset = CGSize.init(width: 0.5, height: 3)
+            self.containerView.layer.shadowOpacity = 0.3
+            
+            // sending viewContainer color to the viewContents.
+            let backgroundCGColor = self.containerView.backgroundColor?.cgColor
+            //You can set your color directly if you want by using below two lines. In my case I'm copying the color.
+            self.containerView.backgroundColor = nil
+            self.containerView.layer.backgroundColor =  backgroundCGColor
+            self.containerView.layer.shouldRasterize = true
+            self.containerView.layer.rasterizationScale = UIScreen.main.scale
+    }
+    
     func setupCell(nutrition: NutritionStructure?){
         nutritionLabel.text = nutrition?.labelNutrition
+        nutrientProgBar2.transform = CGAffineTransform(scaleX: 1, y: 2.5)
+        nutrientProgBar2.layer.cornerRadius = 6
+        nutrientProgBar2.layer.sublayers![1].cornerRadius = 6
+        nutrientProgBar2.subviews[1].clipsToBounds = true
+
         if nutritionLabel.text == "Karbohidrat" {
             if (ageChild >= 1) && (ageChild <= 3) {
-                karboMaks = 155.0
-                nutritionDescription.text = String(Int(selectMenu[0]))+"gr dari total "+String(155)+"gr"
+                karboMaks = 215.0
+                nutritionDescription.text = String(Int(selectMenu[0]))+"gr dari total "+String(215)+"gr"
             }
             else {
                 karboMaks = 220.0
                 nutritionDescription.text = String(Int(selectMenu[0]))+"gr dari total "+String(220)+"gr"
             }
-            barProgressPercentage.text = String(format:"%.1f", 100*selectMenu[0]/karboMaks!)+"%"
+            let calculateKarbo = Int(100*selectMenu[0]/karboMaks!)
+            barProgressPercentage.text = String(calculateKarbo)+"%"
+            
             let progress = selectMenu[0]/karboMaks!
             nutrientProgBar2.setProgress(Float(progress), animated: true)
             
@@ -92,24 +109,28 @@ class NutritionTableViewCell: UITableViewCell {
                 nutrientProgBar2.progressTintColor = UIColor(hex: 0x91AB4D)
             }
             
-            else {
+            else if (progress > 0.75) && (progress <= 1.25) {
                 nutrientProgBar2.progressTintColor = UIColor(hex: 0x507B3E)
             }
-
+            else{
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
 
         }
-        
+                
         else if nutritionLabel.text == "Protein" {
             if (ageChild >= 1) && (ageChild <= 3) {
-                proteinMaks = 26.0
-                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(26)+"gr"
+                proteinMaks = 20.0
+                nutritionDescription.text = String(Int(selectMenu[0]))+"gr dari total "+String(20)+"gr"
             }
             else {
-                proteinMaks = 35.0
-                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(35)+"gr"
+                proteinMaks = 25.0
+                nutritionDescription.text = String(Int(selectMenu[0]))+"gr dari total "+String(25)+"gr"
             }
-            barProgressPercentage.text = String(format:"%.1f", 100*selectMenu[1]/proteinMaks!)+"%"
-            let progress = selectMenu[1]/proteinMaks!
+            let calculateProtein = Int(100*selectMenu[0]/proteinMaks!)
+            barProgressPercentage.text = String(calculateProtein)+"%"
+            
+            let progress = selectMenu[0]/proteinMaks!
             nutrientProgBar2.setProgress(Float(progress), animated: true)
             
             if progress <= 0.25 {
@@ -124,22 +145,27 @@ class NutritionTableViewCell: UITableViewCell {
                 nutrientProgBar2.progressTintColor = UIColor(hex: 0x91AB4D)
             }
             
-            else {
+            else if (progress > 0.75) && (progress <= 1.25) {
                 nutrientProgBar2.progressTintColor = UIColor(hex: 0x507B3E)
+            }
+            else{
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
             }
             
         }
         
         else if nutritionLabel.text == "Lemak" {
             if (ageChild >= 1) && (ageChild <= 3) {
-                lemakMaks = 44.0
-                nutritionDescription.text = String(Int(selectMenu[2]))+"gr dari total "+String(44)+"gr"
+                lemakMaks = 45.0
+                nutritionDescription.text = String(Int(selectMenu[2]))+"gr dari total "+String(45)+"gr"
             }
             else {
-                lemakMaks = 62.0
-                nutritionDescription.text = String(Int(selectMenu[2]))+" dari total "+String(62)+"gr"
+                lemakMaks = 50.0
+                nutritionDescription.text = String(Int(selectMenu[2]))+"gr dari total "+String(50)+"gr"
             }
-            barProgressPercentage.text = String(format:"%.1f", 100*selectMenu[2]/lemakMaks!)+"%"
+            let calculateLemak = Int(100*selectMenu[2]/lemakMaks!)
+            barProgressPercentage.text = String(calculateLemak)+"%"
+            
             let progress = selectMenu[2]/lemakMaks!
             nutrientProgBar2.setProgress(Float(progress), animated: true)
             
@@ -155,107 +181,267 @@ class NutritionTableViewCell: UITableViewCell {
                 nutrientProgBar2.progressTintColor = UIColor(hex: 0x91AB4D)
             }
             
-            else {
+            else if (progress > 0.75) && (progress <= 1.25) {
                 nutrientProgBar2.progressTintColor = UIColor(hex: 0x507B3E)
             }
+            else{
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
         }
-        
+       
         else if nutritionLabel.text == "Vitamin A" {
             if (ageChild >= 1) && (ageChild <= 3) {
-                proteinMaks = 26.0
-                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(26)+"gr"
+                vitAMaks = 400.0
+                nutritionDescription.text = String(Int(selectMenu[2]))+"RE dari total "+String(400)+"RE"
             }
             else {
-                proteinMaks = 35.0
-                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(35)+"gr"
+                vitAMaks = 450.0
+                nutritionDescription.text = String(Int(selectMenu[2]))+"RE dari total "+String(450)+"RE"
             }
-            barProgressPercentage.text = String(format:"%.1f", 100*selectMenu[1]/proteinMaks!)+"%"
+            let calculateVitA = Int(100*selectMenu[2]/vitAMaks!)
+            barProgressPercentage.text = String(calculateVitA)+"%"
+            
+            let progress = selectMenu[2]/vitAMaks!
+            nutrientProgBar2.setProgress(Float(progress), animated: true)
+            
+            if progress <= 0.25 {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
+            
+            else if (progress > 0.25) && (progress <= 0.5) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE88429)
+            }
+            
+            else if (progress > 0.5) && (progress <= 0.75) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x91AB4D)
+            }
+            
+            else if (progress > 0.75) && (progress <= 1.25) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x507B3E)
+            }
+            else{
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
         }
-        
+      
         else if nutritionLabel.text == "Vitamin B" {
             if (ageChild >= 1) && (ageChild <= 3) {
-                lemakMaks = 44.0
-                nutritionDescription.text = String(Int(selectMenu[2]))+"gr dari total "+String(44)+"gr"
+                vitBMaks = 0.5
+                nutritionDescription.text = String(Int(selectMenu[2]))+"mg dari total "+String(0.5)+"mg"
             }
             else {
-                lemakMaks = 62.0
-                nutritionDescription.text = String(Int(selectMenu[2]))+" dari total "+String(62)+"gr"
+                vitBMaks = 0.6
+                nutritionDescription.text = String(Int(selectMenu[2]))+"mg dari total "+String(0.6)+"mg"
             }
-            barProgressPercentage.text = String(format:"%.1f", 100*selectMenu[2]/lemakMaks!)+"%"
+            let calculateVitB = Int(100*selectMenu[2]/vitBMaks!)
+            barProgressPercentage.text = String(calculateVitB)+"%"
+            
+            
+            let progress = selectMenu[2]/vitBMaks!
+            nutrientProgBar2.setProgress(Float(progress), animated: true)
+            
+            if progress <= 0.25 {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
+            
+            else if (progress > 0.25) && (progress <= 0.5) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE88429)
+            }
+            
+            else if (progress > 0.5) && (progress <= 0.75) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x91AB4D)
+            }
+            
+            else if (progress > 0.75) && (progress <= 1.25) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x507B3E)
+            }
+            else{
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
         }
         
         else if nutritionLabel.text == "Vitamin C" {
             if (ageChild >= 1) && (ageChild <= 3) {
-                proteinMaks = 26.0
-                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(26)+"gr"
+                vitCMaks = 40.0
+                nutritionDescription.text = String(Int(selectMenu[1]))+"mg dari total "+String(40)+"mg"
             }
             else {
-                proteinMaks = 35.0
-                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(35)+"gr"
+                vitCMaks = 45.0
+                nutritionDescription.text = String(Int(selectMenu[1]))+"mg dari total "+String(45)+"mg"
             }
-            barProgressPercentage.text = String(format:"%.1f", 100*selectMenu[1]/proteinMaks!)+"%"
+            let calculateVitC = Int(100*selectMenu[1]/vitCMaks!)
+            barProgressPercentage.text = String(calculateVitC)+"%"
+            
+            let progress = selectMenu[1]/vitCMaks!
+            nutrientProgBar2.setProgress(Float(progress), animated: true)
+            
+            if progress <= 0.25 {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
+            
+            else if (progress > 0.25) && (progress <= 0.5) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE88429)
+            }
+            
+            else if (progress > 0.5) && (progress <= 0.75) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x91AB4D)
+            }
+            
+            else if (progress > 0.75) && (progress <= 1.25) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x507B3E)
+            }
+            else{
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
         }
         
         else if nutritionLabel.text == "Vitamin D" {
             if (ageChild >= 1) && (ageChild <= 3) {
-                lemakMaks = 44.0
-                nutritionDescription.text = String(Int(selectMenu[2]))+"gr dari total "+String(44)+"gr"
+                vitDMaks = 15.0
+                nutritionDescription.text = String(Int(selectMenu[2]))+"mcg dari total "+String(15)+"mcg"
             }
             else {
-                lemakMaks = 62.0
-                nutritionDescription.text = String(Int(selectMenu[2]))+" dari total "+String(62)+"gr"
+                vitDMaks = 15.0
+                nutritionDescription.text = String(Int(selectMenu[2]))+"mcg dari total "+String(15)+"mcg"
             }
-            barProgressPercentage.text = String(format:"%.1f", 100*selectMenu[2]/lemakMaks!)+"%"
+            let calculateVitD = Int(100*selectMenu[2]/vitDMaks!)
+            barProgressPercentage.text = String(calculateVitD)+"%"
+            
+            let progress = selectMenu[2]/vitDMaks!
+            nutrientProgBar2.setProgress(Float(progress), animated: true)
+            
+            if progress <= 0.25 {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
+            
+            else if (progress > 0.25) && (progress <= 0.5) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE88429)
+            }
+            
+            else if (progress > 0.5) && (progress <= 0.75) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x91AB4D)
+            }
+            
+            else if (progress > 0.75) && (progress <= 1.25) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x507B3E)
+            }
+            else{
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
         }
         
         else if nutritionLabel.text == "Vitamin E" {
             if (ageChild >= 1) && (ageChild <= 3) {
-                proteinMaks = 26.0
-                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(26)+"gr"
+                vitEMaks = 6.0
+                nutritionDescription.text = String(Int(selectMenu[2]))+"mcg dari total "+String(6)+"mcg"
             }
             else {
-                proteinMaks = 35.0
-                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(35)+"gr"
+                vitEMaks = 7.0
+                nutritionDescription.text = String(Int(selectMenu[2]))+"mcg dari total "+String(7)+"mcg"
             }
-            barProgressPercentage.text = String(format:"%.1f", 100*selectMenu[1]/proteinMaks!)+"%"
+            
+            let calculateVitE = Int(100*selectMenu[2]/vitEMaks!)
+            barProgressPercentage.text = String(calculateVitE)+"%"
+            
+            let progress = selectMenu[2]/vitEMaks!
+            nutrientProgBar2.setProgress(Float(progress), animated: true)
+            
+            if progress <= 0.25 {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
+            
+            else if (progress > 0.25) && (progress <= 0.5) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE88429)
+            }
+            
+            else if (progress > 0.5) && (progress <= 0.75) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x91AB4D)
+            }
+            
+            else if (progress > 0.75) && (progress <= 1.25) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x507B3E)
+            }
+            else{
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
         }
         
         else if nutritionLabel.text == "Zinc" {
             if (ageChild >= 1) && (ageChild <= 3) {
-                lemakMaks = 44.0
-                nutritionDescription.text = String(Int(selectMenu[2]))+"gr dari total "+String(44)+"gr"
+                zincMaks = 3.0
+                nutritionDescription.text = String(Int(selectMenu[2]))+"mg dari total "+String(3)+"mg"
             }
             else {
-                lemakMaks = 62.0
-                nutritionDescription.text = String(Int(selectMenu[2]))+" dari total "+String(62)+"gr"
+                zincMaks = 5.0
+                nutritionDescription.text = String(Int(selectMenu[2]))+"mg dari total "+String(5)+"mg"
             }
-            barProgressPercentage.text = String(format:"%.1f", 100*selectMenu[2]/lemakMaks!)+"%"
+            
+            
+            let calculateZinc = Int(100*selectMenu[2]/zincMaks!)
+            barProgressPercentage.text = String(calculateZinc)+"%"
+            
+            let progress = selectMenu[2]/zincMaks!
+            nutrientProgBar2.setProgress(Float(progress), animated: true)
+            
+            if progress <= 0.25 {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
+            
+            else if (progress > 0.25) && (progress <= 0.5) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE88429)
+            }
+            
+            else if (progress > 0.5) && (progress <= 0.75) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x91AB4D)
+            }
+            
+            else if (progress > 0.75) && (progress <= 1.25) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x507B3E)
+            }
+            else{
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
+            
         }
         
         else if nutritionLabel.text == "Zat Besi" {
             if (ageChild >= 1) && (ageChild <= 3) {
-                proteinMaks = 26.0
-                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(26)+"gr"
+                ironMaks = 7.0
+                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(7)+"gr"
             }
             else {
-                proteinMaks = 35.0
-                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(35)+"gr"
+                ironMaks = 10.0
+                nutritionDescription.text = String(Int(selectMenu[1]))+"gr dari total "+String(10)+"gr"
             }
-            barProgressPercentage.text = String(format:"%.1f", 100*selectMenu[1]/proteinMaks!)+"%"
+            
+            let calculateIron = Int(100*selectMenu[1]/ironMaks!)
+            barProgressPercentage.text = String(calculateIron)+"%"
+            
+            let progress = selectMenu[1]/ironMaks!
+            nutrientProgBar2.setProgress(Float(progress), animated: true)
+            
+            if progress <= 0.25 {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
+            
+            else if (progress > 0.25) && (progress <= 0.5) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE88429)
+            }
+            
+            else if (progress > 0.5) && (progress <= 0.75) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x91AB4D)
+            }
+            
+            else if (progress > 0.75) && (progress <= 1.25) {
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0x507B3E)
+            }
+            else{
+                nutrientProgBar2.progressTintColor = UIColor(hex: 0xE05C23)
+            }
+                
+            
         }
         
     }
     
 }
-
-//extension UIProgressView{
-//    
-//    open override func layoutSubviews() {
-//         super.layoutSubviews()
-//         let maskLayerPath = UIBezierPath(roundedRect: bounds, cornerRadius: self.frame.height / 2)
-//         let maskLayer = CAShapeLayer()
-//         maskLayer.frame = self.bounds
-//         maskLayer.path = maskLayerPath.cgPath
-//         layer.mask = maskLayer
-//   }
-//}
