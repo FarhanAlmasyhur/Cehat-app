@@ -25,12 +25,16 @@ class OnBoardingPage: UIViewController {
     @IBOutlet weak var contentTextView: UITextView!
     
 
+    override func viewDidAppear(_ animated: Bool) {
+        checkUserDefault()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         setupLayout()
+        
 
     }
     
@@ -112,6 +116,14 @@ class OnBoardingPage: UIViewController {
             }
         }
         
+    }
+    
+    func checkUserDefault() {
+        let ageChild: Int? =  UserDefaults.standard.integer(forKey: "childAge")
+        print(ageChild)
+        if ageChild != nil {
+            self.performSegue(withIdentifier: "toNutritionPage", sender: self)
+        }
     }
     
 
