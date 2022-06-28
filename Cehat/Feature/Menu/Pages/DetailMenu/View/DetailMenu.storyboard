@@ -266,6 +266,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S5N-7d-uvC" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="97O-Uq-QFb">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

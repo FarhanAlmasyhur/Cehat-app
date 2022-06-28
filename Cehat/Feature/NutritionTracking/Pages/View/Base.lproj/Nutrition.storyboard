@@ -39,21 +39,15 @@
             </objects>
             <point key="canvasLocation" x="222" y="-694"/>
         </scene>
-        <!--Menu-->
-        <scene sceneID="E1W-7Y-l9H">
+        <!--MenuPage-->
+        <scene sceneID="tWL-bL-t2Z">
             <objects>
-                <viewController id="Xp3-u8-0pP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gUx-rf-Gcz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="TUT-rU-Yzo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Menu" image="fork.knife" catalog="system" id="bbZ-8r-MEm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="njB-rZ-EmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="MenuPage" id="Oib-O7-1uz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="NQG-cF-7hQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mJb-cn-lSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="-31"/>
+            <point key="canvasLocation" x="222" y="-56"/>
         </scene>
         <!--HomePage-->
         <scene sceneID="KiL-1t-yxr">
@@ -68,7 +62,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="ELe-CK-FyZ" kind="relationship" relationship="viewControllers" id="Shp-Ig-DrG"/>
-                        <segue destination="Xp3-u8-0pP" kind="relationship" relationship="viewControllers" id="yaw-La-BkY"/>
+                        <segue destination="Oib-O7-1uz" kind="relationship" relationship="viewControllers" id="99O-fF-JGh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="leJ-fQ-Vqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -78,7 +72,6 @@
     </scenes>
     <resources>
         <image name="chart.bar" catalog="system" width="128" height="90"/>
-        <image name="fork.knife" catalog="system" width="92" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
