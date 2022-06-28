@@ -122,11 +122,13 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="83.705357142857139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Menu-->
         <scene sceneID="prh-zk-5Rn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zRK-5M-ugq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Menu" image="fork.knife" catalog="system" id="gym-xD-VDD"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="ykN-DN-QbY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -149,6 +151,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fork.knife" catalog="system" width="92" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
