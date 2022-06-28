@@ -98,7 +98,9 @@ extension MenuPageViewController: UICollectionViewDelegate, UICollectionViewData
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailMenuViewController") as! DetailMenuViewController
         collectionView.deselectItem(at: indexPath, animated: true)
         vc.menu = arrayMenu[indexPath.row]
+        hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
+        
         
     }
     

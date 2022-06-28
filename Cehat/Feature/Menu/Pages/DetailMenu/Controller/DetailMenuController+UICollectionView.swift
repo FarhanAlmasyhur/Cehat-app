@@ -22,7 +22,7 @@ extension DetailMenuViewController: UICollectionViewDataSource {
         let value = menu?.nutrients[type] ?? 0
         
         cell.setupCell(with: NutrientsData(nutritionType: type, nutritionValue: value))
-        
+        cell.setupUnit(index: indexPath.row)
         return cell
     }
 }

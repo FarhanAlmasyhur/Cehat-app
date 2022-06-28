@@ -30,6 +30,10 @@ class DetailMenuViewController: UIViewController {
         setupCollectionView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        hidesBottomBarWhenPushed = false
+    }
+    
     
     //MARK: - Setup View
     func setupView(){
