@@ -12,6 +12,7 @@ class OnBoardingPage: UIViewController {
     var yearOfBirthCompare : String?
     var todayDateCompare : String?
     var age : Int?
+    var umurAnak : Int?
     @IBOutlet weak var dateOfBirth: UIDatePicker!
     @IBOutlet weak var dateContentLayer: UIView!
     @IBOutlet weak var cehatIcon: UIImageView!
@@ -34,9 +35,9 @@ class OnBoardingPage: UIViewController {
     }
     
     func setupLayout(){
-        cehatIcon.frame = CGRect(x: 100, y: 150, width: 200, height: 200)
+        cehatIcon.frame = CGRect(x: 95, y: 100, width: 200, height: 150)
         
-        cehatText.frame = CGRect(x: 130, y: 280, width: 140, height: 140)
+        cehatText.frame = CGRect(x: 105, y: 220, width: 180, height: 120)
         
         subHeaderText.frame = CGRect(x: 120, y: 390, width: 164, height: 32)
         
@@ -50,7 +51,7 @@ class OnBoardingPage: UIViewController {
         nextButton.roundCorners(corners: [.topRight, .topLeft, .bottomLeft, .bottomRight], amount: 25)
         nextButton.tintColor =  UIColor(hex: 0xE1E1E1)
         nextButton.isUserInteractionEnabled = false
-        nextButton.alpha = 1.0
+        
         
         skipButton.frame = CGRect(x: 157, y: 770, width: 75, height: 21)
         
@@ -58,6 +59,7 @@ class OnBoardingPage: UIViewController {
         dateContentLayer.frame = CGRect(x: 38, y: 435, width: 313, height: 53)
         
     }
+    
     
     @IBAction func datePickerValueChanged(_ sender: Any) {
         let dateStyle = DateFormatter()
@@ -81,11 +83,15 @@ class OnBoardingPage: UIViewController {
         
         todayDateCompare = compareDate.string(from: date)
         age = todayDateInt - yearOfBirthInt
-        
+
         toggleButton()
     }
     
     @IBAction func nextButton(_ sender: Any) {
+        
+        UserDefaults.standard.set(age, forKey: "childAge")  //Integer
+        self.performSegue(withIdentifier: "toNutritionPage", sender: self)
+        
         
     }
     
@@ -93,7 +99,7 @@ class OnBoardingPage: UIViewController {
         DispatchQueue.main.async {
             if self.yearOfBirthCompare != self.todayDateCompare {
                 
-                self.nextButton.isEnabled = true
+                self.nextButton.isUserInteractionEnabled = true
                 self.nextButton.tintColor =  UIColor(hex: 0xE88429)
                 return
             }
@@ -101,7 +107,7 @@ class OnBoardingPage: UIViewController {
             else {
                 self.nextButton.isUserInteractionEnabled = false
                 self.nextButton.tintColor =  UIColor(hex: 0xE1E1E1)
-                self.nextButton.alpha = 1.0
+                
                 return
             }
         }

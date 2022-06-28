@@ -18,3 +18,11 @@ extension UIColor {
         self.init(red: components.R, green: components.G, blue: components.B, alpha: 1)
     }
 }
+
+extension UIColor {
+    static let myDarkGreen = UIColor(named: "DarkGreen")
+    static let myGrayBar = UIColor(named: "GrayBar")
+    static let myRedBar = UIColor(named: "RedBar")
+    static let myOrangeBar = UIColor(named: "OrangeBar")
+    static let myGreenBar = UIColor(named: "GreenBar")
+}

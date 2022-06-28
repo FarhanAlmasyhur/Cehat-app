@@ -21,6 +21,7 @@ class NutritionViewController: UIViewController {
     //Data Dummy Menu Makanan
     var caloriDailyMaks = 0.0
     var indexSelect : Int?
+//    var childAge : Int?
     var selected = "Sup Ayam"
     var menuMakanan = ["Sup Ayam","Stim Ikan","Sup Bihun","Kacang Panjang","Nasi Goreng"]
     var kalori = [96.0,75.0,140.0,80.0,100.0]
@@ -120,10 +121,10 @@ class NutritionViewController: UIViewController {
         let v = UILabel()
         v.font = UIFont.boldSystemFont(ofSize: 18)
         v.textColor = UIColor(hex: 0xE88429)
-        v.frame = CGRect(x: 270, y: 172, width: 55, height: 35)
+        v.frame = CGRect(x: 275, y: 172, width: 55, height: 35)
         
         
-        v.text = String(format:"%.1f", 100*klri/caloriDailyMaks)+"%"
+        v.text = String(Int (100*klri/caloriDailyMaks))+"%"
 
         return v
     }()
@@ -140,8 +141,6 @@ class NutritionViewController: UIViewController {
     
     lazy var barRectangle: UIView = {
         let v = UIView()
-        
-       // var endAngle =
     
         let circlePath1 = UIBezierPath(arcCenter: CGPoint(x: 291, y:187), radius: 41, startAngle: .pi*3/2, endAngle: .pi*7/2 , clockwise: true)
         let circlePath2 = UIBezierPath(arcCenter: CGPoint(x: 291, y:187), radius: 41, startAngle: .pi*3/2, endAngle: -(.pi*2*CGFloat(klri/caloriDailyMaks))+(.pi*3/2) , clockwise: false)
@@ -157,6 +156,7 @@ class NutritionViewController: UIViewController {
         
         shape1.strokeColor = UIColor.myGrayBar?.cgColor
         shape2.strokeColor = UIColor.blue.cgColor
+        shape2.lineCap = .round
         
         var percentCalori = 10
         
@@ -194,6 +194,7 @@ class NutritionViewController: UIViewController {
         agechild()
         addKalori()
         
+
         tableView.register(NutritionTableViewCell.nib(), forCellReuseIdentifier: "NutritionTableViewCell")
         arrOfNutrition = nutritionSeeder.arrOfNutritionSeeder
         tableView.frame = view.bounds
@@ -211,7 +212,10 @@ class NutritionViewController: UIViewController {
         view.addSubview(barProgressPercentage)
         view.addSubview(detailKalori)
         view.addSubview(barRectangle)
+        view.backgroundColor = UIColor(hex: 0xf8f4f4)
+        
     }
+    
         
     
     func addKalori() {
@@ -226,50 +230,19 @@ class NutritionViewController: UIViewController {
     func agechild() {
         let age = 2
         if (age >= 1) && (age <= 3) {
-            caloriDailyMaks = 1125
+            caloriDailyMaks = 1350
         }
         else {
-            caloriDailyMaks = 1600
+            caloriDailyMaks = 1400
         }
     }
     
     
 }
 
-extension UIView {
-    
-    enum Corner:Int {
-        case bottomRight = 0,
-        topRight,
-        bottomLeft,
-        topLeft
-    }
-    
-    private func parseCorner(corner: Corner) -> CACornerMask.Element {
-        let corners: [CACornerMask.Element] = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
-        return corners[corner.rawValue]
-    }
-    
-    private func createMask(corners: [Corner]) -> UInt {
-        return corners.reduce(0, { (a, b) -> UInt in
-            return a + parseCorner(corner: b).rawValue
-        })
-    }
-    
-    func roundCorners(corners: [Corner], amount: CGFloat = 5) {
-        layer.cornerRadius = amount
-        let maskedCorners: CACornerMask = CACornerMask(rawValue: createMask(corners: corners))
-        layer.maskedCorners = maskedCorners
-    }
-}
 
-extension UIColor {
-    static let myDarkGreen = UIColor(named: "DarkGreen")
-    static let myGrayBar = UIColor(named: "GrayBar")
-    static let myRedBar = UIColor(named: "RedBar")
-    static let myOrangeBar = UIColor(named: "OrangeBar")
-    static let myGreenBar = UIColor(named: "GreenBar")
-}
+
+
 
 
 

@@ -11,21 +11,21 @@
         <!--NutrientPage-->
         <scene sceneID="CEM-bk-g6Z">
             <objects>
-                <viewController title="NutrientPage" id="ELe-CK-FyZ" customClass="NutritionViewController" customModule="Cehat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NutritionViewController" title="NutrientPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ELe-CK-FyZ" customClass="NutritionViewController" customModule="Cehat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dql-KW-j89">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pj6-nU-Q6N">
-                                <rect key="frame" x="0.0" y="304" width="414" height="509"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pj6-nU-Q6N">
+                                <rect key="frame" x="0.0" y="294" width="414" height="519"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="90x-ia-gSg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Pj6-nU-Q6N" firstAttribute="trailing" secondItem="90x-ia-gSg" secondAttribute="trailing" id="22z-UK-Nbv"/>
-                            <constraint firstItem="Pj6-nU-Q6N" firstAttribute="top" secondItem="90x-ia-gSg" secondAttribute="top" constant="260" id="UgD-Bc-cBa"/>
+                            <constraint firstItem="Pj6-nU-Q6N" firstAttribute="top" secondItem="90x-ia-gSg" secondAttribute="top" constant="250" id="UgD-Bc-cBa"/>
                             <constraint firstItem="Pj6-nU-Q6N" firstAttribute="leading" secondItem="90x-ia-gSg" secondAttribute="leading" id="WO7-6a-ucy"/>
                             <constraint firstItem="Pj6-nU-Q6N" firstAttribute="bottom" secondItem="90x-ia-gSg" secondAttribute="bottom" id="zVT-hX-BuE"/>
                         </constraints>
@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njB-rZ-EmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="35"/>
+            <point key="canvasLocation" x="222" y="-31"/>
         </scene>
         <!--HomePage-->
         <scene sceneID="KiL-1t-yxr">
@@ -63,6 +63,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.31372549020000001" green="0.4823529412" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.31372549020000001" green="0.4823529412" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="ELe-CK-FyZ" kind="relationship" relationship="viewControllers" id="Shp-Ig-DrG"/>

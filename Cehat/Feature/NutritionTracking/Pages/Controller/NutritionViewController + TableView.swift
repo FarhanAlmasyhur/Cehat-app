@@ -45,44 +45,12 @@ extension NutritionViewController : UITableViewDelegate, UITableViewDataSource{
         
         cell.barProgressPercentage.text = dictOfArr[sections]?[indexPath.row].percentage
         cell.barProgressPercentage.font = UIFont.boldSystemFont(ofSize: 18)
-        /*
-        let persentase = 70
-        
-        if persentase <= 25 {
-            cell.nutrientBarProgress.progressTintColor = UIColor(hex: 0xE05C23)
-        }
-        
-        else if (persentase > 25) && (persentase <= 50) {
-            cell.nutrientBarProgress.progressTintColor = UIColor(hex: 0xE88429)
-        }
-        
-        else if (persentase > 50) && (persentase <= 75) {
-            cell.nutrientBarProgress.progressTintColor = UIColor(hex: 0x91AB4D)
-        }
-        //
-        else {
-            cell.nutrientBarProgress.progressTintColor = UIColor(hex: 0x507B3E)
-        }
-        */
-        //if( dictOfArr[sections]?[indexPath.row].labelNutrition == "Karbohidrat"){
-        //    cell.nutrientBarProgress.progressTintColor = UIColor(hex: 0xFFFFFF)
-        //}
         
         cell.setupCell(nutrition: dictOfArr[sections]?[indexPath.row])
-        //cell.nutrientBarProgress.trackTintColor = UIColor(hex: 0xF4F4F5)
-        //cell.nutrientBarProgress.progressTintColor = UIColor(hex: 0xE88429)
-        //cell.nutrientBarProgress.transform = CGAffineTransform(scaleX: 4, y: 4)
-        //cell.nutrientBarProgress.setProgress(1.0, animated: true)
         
         return cell
     }
      
-    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        var header = nutritionType[section].rawValue
-//
-//        return header
-//    }
     
 
     //    Customize the height for each cell
@@ -101,6 +69,7 @@ extension NutritionViewController : UITableViewDelegate, UITableViewDataSource{
         label.textColor = UIColor(hex: 0x507B3E)
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.frame = CGRect(x: 20, y: 20, width: 160, height: 30)
+        label.sizeToFit()
         view.addSubview(label)
         return view
     }
