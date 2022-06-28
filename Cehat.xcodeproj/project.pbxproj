@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		526EED862857A77C00C92E13 /* OnBoardingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526EED852857A77C00C92E13 /* OnBoardingPage.storyboard */; };
+		AF65160E2869F5AB0066B3C2 /* MenuPage + SectionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF65160D2869F5AB0066B3C2 /* MenuPage + SectionCollectionView.swift */; };
 		AFB3F34928579652002EA297 /* NutritionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */; };
-		BE26BB9E28686AEC008FB608 /* TodayDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26BB9D28686AEC008FB608 /* TodayDate.swift */; };
 		D40E837728532AE9005C2F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837628532AE9005C2F17 /* AppDelegate.swift */; };
 		D40E837928532AE9005C2F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E837828532AE9005C2F17 /* SceneDelegate.swift */; };
 		D40E837B28532AE9005C2F17 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -79,12 +79,12 @@
 /* Begin PBXFileReference section */
 		526EED852857A77C00C92E13 /* OnBoardingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoardingPage.storyboard; sourceTree = "<group>"; };
 		5278CC0A285CDC1F00D2D9B9 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
+		AF65160D2869F5AB0066B3C2 /* MenuPage + SectionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuPage + SectionCollectionView.swift"; sourceTree = "<group>"; };
 		AF72740F2858E654008AADF2 /* NutritionSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionSeeder.swift; sourceTree = "<group>"; };
 		AF7274112858E96E008AADF2 /* NutritionStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionStructure.swift; sourceTree = "<group>"; };
 		AF7274132859C3C3008AADF2 /* NutritionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 		AFB3F34628579652002EA297 /* NutritionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTableViewCell.swift; sourceTree = "<group>"; };
 		AFB3F34728579652002EA297 /* NutritionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionTableViewCell.xib; sourceTree = "<group>"; };
-		BE26BB9D28686AEC008FB608 /* TodayDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayDate.swift; sourceTree = "<group>"; };
 		D40E837328532AE9005C2F17 /* Cehat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cehat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40E837628532AE9005C2F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D40E837828532AE9005C2F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -424,6 +424,7 @@
 				D441570E2865B09B0075FBB7 /* MenuPageViewController + CollectionView.swift */,
 				D441570F2865B09B0075FBB7 /* MenuPageViewController + SearchBar.swift */,
 				D441570B2865B09B0075FBB7 /* MenuPageViewController.swift */,
+				AF65160D2869F5AB0066B3C2 /* MenuPage + SectionCollectionView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -666,6 +667,7 @@
 				D454AC1A2865BD1D00147F0E /* StaticFavoriteManager.swift in Sources */,
 				D454AC022865B4D200147F0E /* CoreDataHelper.swift in Sources */,
 				D44157112865B09B0075FBB7 /* MenuPageViewCollectionViewCell+ Extension UICollectionViewCell.swift in Sources */,
+				AF65160E2869F5AB0066B3C2 /* MenuPage + SectionCollectionView.swift in Sources */,
 				D454AC0E2865BCCE00147F0E /* MenuSeeder.swift in Sources */,
 				D44156CA286481BB0075FBB7 /* BulletListHelper.swift in Sources */,
 				D44156CC286481BB0075FBB7 /* HexColorExtension.swift in Sources */,

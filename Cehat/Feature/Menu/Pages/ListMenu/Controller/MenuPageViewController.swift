@@ -22,6 +22,7 @@ class MenuPageViewController: UIViewController {
     var historyArray: [Menu] = []
     let historyManager: MenuHistoryRepository = CoreDataHistoryManager()
     let favoriteManager: MenuFavoriteRepository = CoreDataFavoriteManager()
+    var flag : Bool?
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var menuCollectionView: UICollectionView!
@@ -56,6 +57,7 @@ class MenuPageViewController: UIViewController {
         searchBar.searchTextField.layer.cornerRadius = 20
         searchBar.searchTextField.layer.masksToBounds = true
         searchBar.delegate = self
+//        searchBar.backgroundColor = .clear
     }
     
     func deleteArray(){
@@ -74,14 +76,17 @@ class MenuPageViewController: UIViewController {
             deleteArray()
             arrayMenu = seeder.getAllMenu()
             setupArray(menus: arrayMenu)
+            flag = false
             self.nameEmpty.isHidden = true
             self.imageEmpty.isHidden = true
             self.menuCollectionView.isHidden = false
             menuCollectionView.reloadData()
+            
         }
         if sender.selectedSegmentIndex == 1 {
             deleteArray()
             favoriteArray = favoriteManager.getFavoriteMenu() ?? []
+            flag = false
             if favoriteArray.count == 0{
                 self.nameEmpty.isHidden = false
                 self.imageEmpty.isHidden = false
@@ -104,6 +109,9 @@ class MenuPageViewController: UIViewController {
             deleteArray()
             let dictionaryHistory = historyManager.getHistoryMenu()
             historyArray = dictionaryHistory?[Date.getTodaysDate()] ?? []
+            
+            
+            flag = true
             if historyArray.count == 0{
                 self.nameEmpty.isHidden = false
                 self.imageEmpty.isHidden = false
