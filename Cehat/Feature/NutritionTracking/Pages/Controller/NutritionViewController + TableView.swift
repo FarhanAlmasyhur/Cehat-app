@@ -46,10 +46,13 @@ extension NutritionViewController : UITableViewDelegate, UITableViewDataSource{
         cell.barProgressPercentage.text = dictOfArr[sections]?[indexPath.row].percentage
         cell.barProgressPercentage.font = UIFont.boldSystemFont(ofSize: 18)
         
-        cell.setupCell(nutrition: dictOfArr[sections]?[indexPath.row])
+        cell.setupCell(nutrition: dictOfArr[sections]?[indexPath.row], nutritionValue: nutritionArray[indexPath.row])
+        print(nutritionArray)
         
         return cell
     }
+    
+    
      
     
 
