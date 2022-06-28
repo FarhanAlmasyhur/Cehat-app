@@ -83,6 +83,7 @@
             <size key="customSize" width="123" height="124"/>
             <connections>
                 <outlet property="nutritionName" destination="Ss3-IA-FaA" id="iXv-Lq-wXz"/>
+                <outlet property="nutritionUnit" destination="Dct-HY-TxH" id="Lae-Ia-qr6"/>
                 <outlet property="roundView" destination="fyS-Je-yCf" id="r3F-OJ-kPz"/>
                 <outlet property="totalNutrition" destination="fPq-yb-M25" id="ROz-T8-RXP"/>
             </connections>

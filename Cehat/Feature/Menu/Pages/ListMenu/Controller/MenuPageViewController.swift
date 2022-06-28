@@ -43,6 +43,9 @@ class MenuPageViewController: UIViewController {
 //            navigationController?.setNavigationBarHidden(true, animated: animated)
 //        }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        hidesBottomBarWhenPushed = false
+    }
     
     func setupArray(menus: [Menu]){
         filteredMenuNames = menus.map{$0.name}
