@@ -34,6 +34,11 @@ class OnBoardingPage: UIViewController {
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        checkUserDefault()
+    }
+    
+    
     func setupLayout(){
         cehatIcon.frame = CGRect(x: 95, y: 100, width: 200, height: 150)
         
@@ -112,6 +117,13 @@ class OnBoardingPage: UIViewController {
             }
         }
         
+    }
+    
+    func checkUserDefault() {
+        let ageChild: Int? =  UserDefaults.standard.integer(forKey: "childAge")
+        if ageChild != nil {
+            self.performSegue(withIdentifier: "toNutritionPage", sender: self)
+        }
     }
     
 
