@@ -32,5 +32,10 @@ extension MenuPageViewController: UICollectionViewDelegate, UICollectionViewData
         vc.menu = arrayMenu[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
         
+        let ageChild: Int? =  UserDefaults.standard.integer(forKey: "childAge")
+        if ageChild == 0 {
+            self.performSegue(withIdentifier: "toOnBoardingPage", sender: self)
+        }
+        
     }
 }

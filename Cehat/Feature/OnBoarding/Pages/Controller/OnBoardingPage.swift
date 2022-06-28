@@ -35,7 +35,7 @@ class OnBoardingPage: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        checkUserDefault()
+//        checkUserDefault()
     }
     
     

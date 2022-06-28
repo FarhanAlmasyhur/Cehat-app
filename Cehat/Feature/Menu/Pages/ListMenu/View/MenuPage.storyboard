@@ -116,11 +116,20 @@
                         <outlet property="nameEmpty" destination="Pv4-4A-FRt" id="o07-rO-mVU"/>
                         <outlet property="searchBar" destination="dXG-xe-zfi" id="dbE-dS-Eoe"/>
                         <outlet property="viewSegmented" destination="RjG-oR-cGe" id="sRY-Qr-4vQ"/>
+                        <segue destination="irx-Nu-ydN" kind="presentation" identifier="toOnBoardingPage" modalPresentationStyle="fullScreen" id="qdI-Wc-vU0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="83.705357142857139"/>
+        </scene>
+        <!--OnBoardingPage-->
+        <scene sceneID="rGC-ya-g4G">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="OnBoardingPage" storyboardName="OnBoardingPage" id="irx-Nu-ydN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QGJ-mf-gBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="32"/>
         </scene>
         <!--Menu-->
         <scene sceneID="prh-zk-5Rn">
