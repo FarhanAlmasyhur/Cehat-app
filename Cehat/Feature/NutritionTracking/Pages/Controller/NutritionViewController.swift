@@ -38,7 +38,7 @@ class NutritionViewController: UIViewController {
     var vitaminE = 0.0
     var zinc = 0.0
     var iron = 0.0
-    var nutritionArray: [Double] = []
+    var nutritionArray: [NutritionType:[Double]] = [:]
 
     
     lazy var bgRect: UIView = {
@@ -243,6 +243,9 @@ class NutritionViewController: UIViewController {
     }
     
     func calculateNutrition(menus: [Menu]){
+        nutritionArray.removeAll()
+        nutritionArray.updateValue([], forKey: .macro)
+        nutritionArray.updateValue([], forKey: .micro)
         for menu in menus {
             carbohydrate += menu.nutrients[.carbohydrate]
             protein += menu.nutrients[.protein]
@@ -256,16 +259,16 @@ class NutritionViewController: UIViewController {
             iron += menu.nutrients[.iron]
         }
         
-        nutritionArray.append(carbohydrate)
-        nutritionArray.append(protein)
-        nutritionArray.append(fat)
-        nutritionArray.append(vitaminA)
-        nutritionArray.append(vitaminB)
-        nutritionArray.append(vitaminC)
-        nutritionArray.append(vitaminD)
-        nutritionArray.append(vitaminE)
-        nutritionArray.append(zinc)
-        nutritionArray.append(iron)
+        nutritionArray[.macro]?.append(carbohydrate)
+        nutritionArray[.macro]?.append(protein)
+        nutritionArray[.macro]?.append(fat)
+        nutritionArray[.micro]?.append(vitaminA)
+        nutritionArray[.micro]?.append(vitaminB)
+        nutritionArray[.micro]?.append(vitaminC)
+        nutritionArray[.micro]?.append(vitaminD)
+        nutritionArray[.micro]?.append(vitaminE)
+        nutritionArray[.micro]?.append(zinc)
+        nutritionArray[.micro]?.append(iron)
         
     }
     
