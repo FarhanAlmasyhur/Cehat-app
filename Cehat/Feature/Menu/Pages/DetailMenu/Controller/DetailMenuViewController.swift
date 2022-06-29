@@ -76,9 +76,11 @@ class DetailMenuViewController: UIViewController {
         
         if added{
             let alert = UIAlertController(title: "Berhasil!", message: "Menu Berhasil ditambahkan ke kebutuhan harian", preferredStyle: .alert)
-            let okeButtonAction = UIAlertAction(title: "Oke", style: UIAlertAction.Style.default, handler: nil)
+            let okeButtonAction = UIAlertAction(title: "Oke", style: UIAlertAction.Style.default, handler: {[self]_ in
+                    self.navigationController?.popViewController(animated: true)})
             // change title color
             okeButtonAction.setValue(UIColor.myDarkGreen, forKey: "titleTextColor")
+            
             
             // add the action for Alert
             alert.addAction(okeButtonAction)
@@ -89,9 +91,7 @@ class DetailMenuViewController: UIViewController {
     
     func firstAlert(){
         let alert = UIAlertController(title: "Perhatian", message: "Pastikan takaran bahan yang digunakan sesuai karena akan berpengaruh pada jumlah kalorinya", preferredStyle: .alert)
-        let okeButtonAction = UIAlertAction(title: "Oke", style: UIAlertAction.Style.default, handler: {action in
-            let _ = self.menuHistoryManager.addToHistory(idMenu: self.menu?.id ?? -1)
-        })
+        let okeButtonAction = UIAlertAction(title: "Oke", style: UIAlertAction.Style.default, handler: nil)
         
         // change title color
         okeButtonAction.setValue(UIColor.myDarkGreen, forKey: "titleTextColor")

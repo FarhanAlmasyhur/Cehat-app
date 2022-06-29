@@ -188,6 +188,9 @@ class NutritionViewController: UIViewController {
         return v
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -203,10 +206,7 @@ class NutritionViewController: UIViewController {
         dailyMenus = dailyDictMenu[Date.getTodaysDate()] ?? []
         
         for menu in dailyMenus {
-            
             klri += menu.nutrients[.calories]
-            print(klri)
-//            menu.nutrients[.carbohydrate]
         }
         calculateNutrition(menus: dailyMenus)
     }
@@ -230,6 +230,7 @@ class NutritionViewController: UIViewController {
         view.addSubview(detailKalori)
         view.addSubview(barRectangle)
         view.backgroundColor = UIColor(hex: 0xf8f4f4)
+        tableView.reloadData()
     }
     
     func agechild() {
