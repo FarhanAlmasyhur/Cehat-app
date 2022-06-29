@@ -11,12 +11,13 @@ extension MenuPageViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let dictionaryHistory = historyManager.getHistoryMenu()
-        let dateData: [String] = dictionaryHistory?.keys.map{$0}.sorted{$0.localizedStandardCompare($1) == .orderedDescending} ?? []
-        let sections = dateData[section]
+        
         
         if flag == false {
             return filteredMenuNames.count
         }else{
+            let dateData: [String] = dictionaryHistory?.keys.map{$0}.sorted{$0.localizedStandardCompare($1) == .orderedDescending} ?? []
+            let sections = dateData[section]
             return dictionaryHistory?[sections]?.count ?? 0
 
         }
