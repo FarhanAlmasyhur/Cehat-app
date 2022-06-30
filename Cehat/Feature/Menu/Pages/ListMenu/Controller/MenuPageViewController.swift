@@ -7,6 +7,10 @@
 
 import UIKit
 
+//protocol AddedNewMenuDelegate {
+//    func newMenuAdded()
+//}
+
 class MenuPageViewController: UIViewController {
     
     var arrayMenu: [Menu] = []
@@ -22,14 +26,14 @@ class MenuPageViewController: UIViewController {
     var historyArray: [Menu] = []
     let historyManager: MenuHistoryRepository = CoreDataHistoryManager()
     let favoriteManager: MenuFavoriteRepository = CoreDataFavoriteManager()
-    var flag : Bool?
+    var flag : Bool? = false
+    
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var viewSegmented: UIView!
     @IBOutlet weak var nameEmpty: UILabel!
     @IBOutlet weak var imageEmpty: UIImageView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

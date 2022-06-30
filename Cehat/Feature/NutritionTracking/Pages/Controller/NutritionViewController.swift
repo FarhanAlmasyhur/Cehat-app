@@ -12,40 +12,34 @@ class NutritionViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    // CoreData Helper
+    let menuManager: MenuHistoryRepository = CoreDataHistoryManager()
+    
     //  Data
     var arrOfNutrition : [NutritionStructure] = []
     var nutritionSeeder = NutritionSeeder()
     var dictOfArr: [NutritionType: [NutritionStructure]] = [:]
     var nutritionType: [NutritionType] = [.macro, .micro]
+    var dailyDictMenu: [String: [Menu]] = [:]
+    var dailyMenus: [Menu] = []
     
-    //Data Dummy Menu Makanan
+    //Data Menu Makanan
     var caloriDailyMaks = 0.0
+    var percentCalori: Double = 0.0
     var indexSelect : Int?
-//    var childAge : Int?
-    var selected = "Sup Ayam"
-    var menuMakanan = ["Sup Ayam","Stim Ikan","Sup Bihun","Kacang Panjang","Nasi Goreng"]
-    var kalori = [96.0,75.0,140.0,80.0,100.0]
-    var karbohidrat = [20,10,5,0,10]
-    var protein = [20,10,5,0,10]
-    var lemak = [3,9,6,0,1]
-    var vitA = [1,1,1,0,0]
-    var vitB = [1,1,1,0,0]
-    var vitC = [1,1,1,0,0]
-    var vitD = [1,1,1,0,0]
-    var vitE = [1,1,1,0,0]
-    var zatBesi = [1,1,1,0,0]
-    var zinc = [1,1,1,0,0]
     var klri = 0.0
-    var karbo = 0
-    var pro = 0
-    var lem = 0
-    var vA = 0
-    var vB = 0
-    var vC = 0
-    var vD = 0
-    var vE = 0
-    var zBes = 0
-    var znc = 0
+    var carbohydrate = 0.0
+    var protein = 0.0
+    var fat = 0.0
+    var vitaminA = 0.0
+    var vitaminB = 0.0
+    var vitaminC = 0.0
+    var vitaminD = 0.0
+    var vitaminE = 0.0
+    var zinc = 0.0
+    var iron = 0.0
+    var nutritionArray: [NutritionType:[Double]] = [:]
+
     
     lazy var bgRect: UIView = {
         let v = UIView()
@@ -92,7 +86,6 @@ class NutritionViewController: UIViewController {
         v.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         v.textColor = UIColor(hex: 0x000000)
         v.frame = CGRect(x: 42, y: 165, width: 178, height: 93)
-        var percentCalori = 68
         
         if percentCalori <= 25 {
             v.text = "Kebutuhan anak Anda belum terpenuhi, ayo berikan makanan untuk memenuhinya"
@@ -122,9 +115,19 @@ class NutritionViewController: UIViewController {
         v.font = UIFont.boldSystemFont(ofSize: 18)
         v.textColor = UIColor(hex: 0xE88429)
         v.frame = CGRect(x: 275, y: 172, width: 55, height: 35)
-        
-        
         v.text = String(Int (100*klri/caloriDailyMaks))+"%"
+        
+        if percentCalori <= 25 {
+            v.textColor = UIColor.myRedBar
+        } else if (percentCalori > 25) && (percentCalori <= 50) {
+            v.textColor = UIColor.myOrangeBar
+        } else if (percentCalori > 50) && (percentCalori <= 75) {
+            v.textColor = UIColor.myGreenBar
+        } else {
+            v.textColor = UIColor.myDarkGreen
+        }
+        
+        
 
         return v
     }()
@@ -158,7 +161,7 @@ class NutritionViewController: UIViewController {
         shape2.strokeColor = UIColor.blue.cgColor
         shape2.lineCap = .round
         
-        var percentCalori = 10
+        percentCalori = (klri/caloriDailyMaks) * 100
         
         if percentCalori <= 25 {
             shape2.strokeColor = UIColor.myRedBar?.cgColor
@@ -185,16 +188,30 @@ class NutritionViewController: UIViewController {
         return v
     }()
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        agechild()
-        addKalori()
-        
 
+        agechild()
+        setupData()
+        setupView()
+        
+    }
+    
+    func setupData(){
+        dailyDictMenu = menuManager.getHistoryMenu() ?? [:]
+        dailyMenus = dailyDictMenu[Date.getTodaysDate()] ?? []
+        
+        for menu in dailyMenus {
+            klri += menu.nutrients[.calories]
+        }
+        calculateNutrition(menus: dailyMenus)
+    }
+    
+    func setupView(){
         tableView.register(NutritionTableViewCell.nib(), forCellReuseIdentifier: "NutritionTableViewCell")
         arrOfNutrition = nutritionSeeder.arrOfNutritionSeeder
         tableView.frame = view.bounds
@@ -213,18 +230,7 @@ class NutritionViewController: UIViewController {
         view.addSubview(detailKalori)
         view.addSubview(barRectangle)
         view.backgroundColor = UIColor(hex: 0xf8f4f4)
-        
-    }
-    
-        
-    
-    func addKalori() {
-        for i in 0...4 {
-            if menuMakanan[i] == selected {
-                indexSelect = i
-            }
-        }
-        klri = klri + kalori[indexSelect!]
+        tableView.reloadData()
     }
     
     func agechild() {
@@ -237,6 +243,35 @@ class NutritionViewController: UIViewController {
         }
     }
     
+    func calculateNutrition(menus: [Menu]){
+        nutritionArray.removeAll()
+        nutritionArray.updateValue([], forKey: .macro)
+        nutritionArray.updateValue([], forKey: .micro)
+        for menu in menus {
+            carbohydrate += menu.nutrients[.carbohydrate]
+            protein += menu.nutrients[.protein]
+            fat += menu.nutrients[.fat]
+            vitaminA += menu.nutrients[.vitaminA]
+            vitaminB += menu.nutrients[.vitaminB]
+            vitaminC += menu.nutrients[.vitaminC]
+            vitaminD += menu.nutrients[.vitaminD]
+            vitaminE += menu.nutrients[.vitaminE]
+            zinc += menu.nutrients[.zinc]
+            iron += menu.nutrients[.iron]
+        }
+        
+        nutritionArray[.macro]?.append(carbohydrate)
+        nutritionArray[.macro]?.append(protein)
+        nutritionArray[.macro]?.append(fat)
+        nutritionArray[.micro]?.append(vitaminA)
+        nutritionArray[.micro]?.append(vitaminB)
+        nutritionArray[.micro]?.append(vitaminC)
+        nutritionArray[.micro]?.append(vitaminD)
+        nutritionArray[.micro]?.append(vitaminE)
+        nutritionArray[.micro]?.append(zinc)
+        nutritionArray[.micro]?.append(iron)
+        
+    }
     
 }
 

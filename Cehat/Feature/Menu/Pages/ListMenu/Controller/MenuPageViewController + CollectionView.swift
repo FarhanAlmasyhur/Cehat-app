@@ -10,13 +10,15 @@ import UIKit
 extension MenuPageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let dictionaryHistory = historyManager.getHistoryMenu()
+        
         
         if flag == false {
             return filteredMenuNames.count
         }else{
-            let dictionaryHistory = historyManager.getHistoryMenu()
-            var dateData: [String] = dictionaryHistory?.keys.map{$0} ?? []
-            return dictionaryHistory?.count ?? 0
+            let dateData: [String] = dictionaryHistory?.keys.map{$0}.sorted{$0.localizedStandardCompare($1) == .orderedDescending} ?? []
+            let sections = dateData[section]
+            return dictionaryHistory?[sections]?.count ?? 0
 
         }
 //        return filteredMenuNames.count
@@ -28,11 +30,11 @@ extension MenuPageViewController: UICollectionViewDelegate, UICollectionViewData
       }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-
+        let dictionaryHistory = historyManager.getHistoryMenu()
         if flag == false {
             return 1
         }else{
-            return historyArray.count
+            return dictionaryHistory?.keys.map{$0}.count ?? 1
 
         }
 
@@ -42,7 +44,7 @@ extension MenuPageViewController: UICollectionViewDelegate, UICollectionViewData
 
         if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "sectionHeader", for: indexPath) as? SectionHeader{
             let dictionaryHistory = historyManager.getHistoryMenu()
-            var dateData: [String] = dictionaryHistory?.keys.map{$0} ?? []
+            let dateData: [String] = dictionaryHistory?.keys.map{$0} ?? []
             if flag == false{
                 sectionHeader.sectionHeaderlabel.text = ""
             }else{
@@ -60,7 +62,6 @@ extension MenuPageViewController: UICollectionViewDelegate, UICollectionViewData
         
         let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MenuPageCollectionViewCell
         cell.photoMenu.image = UIImage(named: menuImages[indexPath.row])
-        
         cell.nameMenu.text = filteredMenuNames[indexPath.row]
         cell.nameMenu.font = UIFont.boldSystemFont(ofSize: 18)
         cell.nameMenu.frame = CGRect(x: 139, y: 261, width: 111, height: 24)

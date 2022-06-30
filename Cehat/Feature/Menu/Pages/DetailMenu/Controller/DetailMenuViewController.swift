@@ -34,6 +34,10 @@ class DetailMenuViewController: UIViewController {
         hidesBottomBarWhenPushed = false
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        firstAlert()
+    }
+    
     
     //MARK: - Setup View
     func setupView(){
@@ -68,10 +72,26 @@ class DetailMenuViewController: UIViewController {
     
     // MARK: - Action
     @IBAction func addMenu(_ sender: Any) {
+        let added = self.menuHistoryManager.addToHistory(idMenu: self.menu?.id ?? -1)
+        
+        if added{
+            let alert = UIAlertController(title: "Berhasil!", message: "Menu Berhasil ditambahkan ke kebutuhan harian", preferredStyle: .alert)
+            let okeButtonAction = UIAlertAction(title: "Oke", style: UIAlertAction.Style.default, handler: {[self]_ in
+                    self.navigationController?.popViewController(animated: true)})
+            // change title color
+            okeButtonAction.setValue(UIColor.myDarkGreen, forKey: "titleTextColor")
+            
+            
+            // add the action for Alert
+            alert.addAction(okeButtonAction)
+
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func firstAlert(){
         let alert = UIAlertController(title: "Perhatian", message: "Pastikan takaran bahan yang digunakan sesuai karena akan berpengaruh pada jumlah kalorinya", preferredStyle: .alert)
-        let okeButtonAction = UIAlertAction(title: "Oke", style: UIAlertAction.Style.default, handler: {action in
-            let _ = self.menuHistoryManager.addToHistory(idMenu: self.menu?.id ?? -1)
-        })
+        let okeButtonAction = UIAlertAction(title: "Oke", style: UIAlertAction.Style.default, handler: nil)
         
         // change title color
         okeButtonAction.setValue(UIColor.myDarkGreen, forKey: "titleTextColor")
@@ -84,10 +104,10 @@ class DetailMenuViewController: UIViewController {
     
     @IBAction func favoriteButton(_ sender: Any) {
         if favoritedMenu {
-            menuFavoriteManager.deleteFromFavorite(idMenu: self.menu?.id ?? -1)
+            let _ = menuFavoriteManager.deleteFromFavorite(idMenu: self.menu?.id ?? -1)
             checkFavorited()
         } else {
-            menuFavoriteManager.addToFavorite(idMenu: self.menu?.id ?? -1)
+            let _ = menuFavoriteManager.addToFavorite(idMenu: self.menu?.id ?? -1)
             checkFavorited()
         }
     }
